@@ -113,5 +113,23 @@ class CalibratedHybrid(ClassifierMixin,BaseEstimator):
         matrix=np.column_stack([log_odds(model.predict_proba(x)[:,1]).ravel() for model in self.bases_])
         return self.meta_.predict_proba(matrix[:,self.columns_])
 
+    def explain(self,x):
+        """Exact additive decomposition on the stack's log-odds scale.
+
+        These are model contributions, not causal or medical explanations.
+        """
+        check_is_fitted(self,'meta_')
+        probabilities=np.column_stack([model.predict_proba(x)[:,1] for model in self.bases_])
+        logits=np.column_stack([log_odds(probabilities[:,i]).ravel() for i in range(2)])
+        contributions=np.zeros_like(logits)
+        contributions[:,self.columns_]=logits[:,self.columns_]*self.meta_.coef_[0]
+        intercept=float(self.meta_.intercept_[0])
+        total=intercept+contributions.sum(axis=1)
+        probability=np.exp(-np.logaddexp(0,-total))
+        return pd.DataFrame(dict(bn_probability=probabilities[:,0],mlp_probability=probabilities[:,1],
+            intercept=intercept,bn_log_odds_contribution=contributions[:,0],
+            mlp_log_odds_contribution=contributions[:,1],combined_log_odds=total,
+            probability=probability),index=x.index)
+
     def predict(self,x):
         return (self.predict_proba(x)[:,1]>=.5).astype(int)

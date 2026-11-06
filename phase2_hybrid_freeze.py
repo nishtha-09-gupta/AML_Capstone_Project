@@ -18,6 +18,7 @@ from phase2_improve import TrainingCache,select,detail
 from phase2_train import ROOT
 from phase2_verify import read,require
 from phase2_hybrid_verify import verify_detail
+from phase2_hybrids import CalibratedHybrid
 from train import prepare_partitions,positive_probability
 
 
@@ -60,7 +61,7 @@ def freeze(run):
     return dict(status='PASS',final_models_checked=len(decisions),training_rows=len(s),C_T_evaluated=False)
 
 
-def predict(run,rows,key='Calibrated_BN-MLP__42'):
+def predict(run,rows,key='Calibrated_BN-MLP__42',explain=False):
     run=Path(run);require(read(run/'verification.json')['status']=='PASS','Study must pass verification')
     errors=validate_features(rows)
     if errors:raise ValueError('; '.join(errors))
@@ -68,16 +69,20 @@ def predict(run,rows,key='Calibrated_BN-MLP__42'):
     require(key in record,'Choose a model listed in final_models/freeze.json')
     spec=record[key];file=run/'final_models'/spec['file']
     require(hashlib.sha256(file.read_bytes()).hexdigest()==spec['sha256'],'Model integrity failure')
-    p=positive_probability(joblib.load(file),clean_features(rows))
+    model=joblib.load(file)
+    if explain:
+        require(isinstance(model,CalibratedHybrid),'Explanations require a calibrated model')
+        return model.explain(clean_features(rows))
+    p=positive_probability(model,clean_features(rows))
     return pd.DataFrame(dict(probability=p,cutoff=.5,predicted_presence=(p>=.5).astype(int)))
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('run')
-    parser.add_argument('--input-csv');parser.add_argument('--output');parser.add_argument('--model',default='Calibrated_BN-MLP__42')
+    parser.add_argument('--explain',action='store_true');parser.add_argument('--input-csv');parser.add_argument('--output');parser.add_argument('--model',default='Calibrated_BN-MLP__42')
     args=parser.parse_args()
     if args.input_csv:
         if not args.output:parser.error('--output is required with --input-csv')
         if Path(args.output).exists():raise FileExistsError('Choose a new output path')
-        predict(args.run,pd.read_csv(args.input_csv),args.model).to_csv(args.output,index=False)
+        predict(args.run,pd.read_csv(args.input_csv),args.model,args.explain).to_csv(args.output,index=False)
     else:print(json.dumps(freeze(args.run),indent=2))

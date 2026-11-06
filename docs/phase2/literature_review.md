@@ -32,3 +32,15 @@ A justified implementation and a reproducible negative result satisfy technical
 investigation; they do not establish the successful added value needed to promise
 hybrid bonus marks. Evaluation data were not used to search for a more flattering
 variant.
+
+## Follow-up calibration and fusion
+
+[scikit-learn's StackingClassifier documentation](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingClassifier.html)
+describes training the final estimator on cross-validated base predictions.
+The follow-up applies this principle to two logits with penalized logistic fusion
+and calibrated single-base ablations. Unlike fitting a meta-model on an existing
+global OOF matrix, fresh cross-fitting is repeated within every nested training
+subset. Guo et al. motivate checking confidence separately from ranking; the
+present study uses logistic calibration and does not reproduce their temperature
+scaling experiments. Residual correction is an alternative tested mechanism,
+not a claim to implement a ResNet or reproduce image-recognition results.

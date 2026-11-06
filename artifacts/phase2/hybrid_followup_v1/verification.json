@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "models_checked": 105,
+  "final_models_checked": 12,
+  "smoke": false,
+  "source_rows": 550,
+  "forbidden_rows_excluded": 368,
+  "checks": [
+    "Every model and seed has complete common outer-fold coverage",
+    "Inner search stays within outer training rows",
+    "Meta cross-fitting and early stopping exclude validation rows",
+    "C and T never enter training or scoring",
+    "Model hashes, round trips, targets, metrics and grid selections reconstruct"
+  ],
+  "scope": "Exploratory follow-up after original results; not untouched confirmation"
+}

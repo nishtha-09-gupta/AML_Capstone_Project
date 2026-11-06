@@ -1,0 +1,162 @@
+{
+  "Calibrated BN-MLP minus BN": {
+    "mean_brier_difference": -0.009555521792850125,
+    "percentile_95": [
+      -0.017011391419552564,
+      -0.0024761572141299153
+    ],
+    "seed_differences": {
+      "42": -0.009629857626660203,
+      "52": -0.009268454234227641,
+      "62": -0.009768253517662535
+    },
+    "winning_seed_fold_pairs": 15,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "Calibrated BN-MLP minus Tuned MLP": {
+    "mean_brier_difference": -0.0025504133788037896,
+    "percentile_95": [
+      -0.008296230771828101,
+      0.0027956296729275366
+    ],
+    "seed_differences": {
+      "42": -0.0015929044365672823,
+      "52": -0.0028240162563709916,
+      "62": -0.003234319443473094
+    },
+    "winning_seed_fold_pairs": 10,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "Calibrated BN-MLP minus Calibrated BN": {
+    "mean_brier_difference": -0.0012554903555093014,
+    "percentile_95": [
+      -0.0040464658364968405,
+      0.0016244926233219277
+    ],
+    "seed_differences": {
+      "42": -0.001329826189319378,
+      "52": -0.0009684227968868152,
+      "62": -0.001468222080321709
+    },
+    "winning_seed_fold_pairs": 11,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "Calibrated BN-MLP minus Calibrated MLP": {
+    "mean_brier_difference": -0.0031567719733032024,
+    "percentile_95": [
+      -0.008726568182828411,
+      0.001988761392401307
+    ],
+    "seed_differences": {
+      "42": -0.001484973479511633,
+      "52": -0.004275939976795699,
+      "62": -0.003709402463602274
+    },
+    "winning_seed_fold_pairs": 9,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "Calibrated BN-MLP minus Original BN feature MLP": {
+    "mean_brier_difference": -0.002369966474311602,
+    "percentile_95": [
+      -0.00689410459221239,
+      0.002047463297891008
+    ],
+    "seed_differences": {
+      "42": -0.002834436293550881,
+      "52": -0.0008783065602952409,
+      "62": -0.0033971565690886843
+    },
+    "winning_seed_fold_pairs": 10,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "BN residual MLP minus BN": {
+    "mean_brier_difference": -0.0009287590001374585,
+    "percentile_95": [
+      -0.0070761638996058975,
+      0.005457684182639141
+    ],
+    "seed_differences": {
+      "42": 2.883979973707222e-06,
+      "52": -0.0011403071383523664,
+      "62": -0.00164885384203372
+    },
+    "winning_seed_fold_pairs": 9,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "BN residual MLP minus Tuned MLP": {
+    "mean_brier_difference": 0.006076349413908878,
+    "percentile_95": [
+      -0.003352866361074281,
+      0.015163023880115326
+    ],
+    "seed_differences": {
+      "42": 0.008039837170066627,
+      "52": 0.005304130839504282,
+      "62": 0.0048850802321557234
+    },
+    "winning_seed_fold_pairs": 2,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "BN residual MLP minus Calibrated BN": {
+    "mean_brier_difference": 0.007371272437203367,
+    "percentile_95": [
+      0.0005602863493605942,
+      0.014177840207769387
+    ],
+    "seed_differences": {
+      "42": 0.008302915417314533,
+      "52": 0.007159724298988459,
+      "62": 0.006651177595307107
+    },
+    "winning_seed_fold_pairs": 0,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "BN residual MLP minus Calibrated MLP": {
+    "mean_brier_difference": 0.005469990819409465,
+    "percentile_95": [
+      -0.003796677728858094,
+      0.014950572811449063
+    ],
+    "seed_differences": {
+      "42": 0.00814776812712228,
+      "52": 0.003852207119079574,
+      "62": 0.004409997212026544
+    },
+    "winning_seed_fold_pairs": 1,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  },
+  "BN residual MLP minus Original BN feature MLP": {
+    "mean_brier_difference": 0.006256796318401064,
+    "percentile_95": [
+      -0.0015045687718422277,
+      0.01419016069403756
+    ],
+    "seed_differences": {
+      "42": 0.00679830531308303,
+      "52": 0.007249840535580033,
+      "62": 0.004722243106540132
+    },
+    "winning_seed_fold_pairs": 1,
+    "total_seed_fold_pairs": 15,
+    "method": "2000 paired source-row bootstrap resamples retaining all seeds, fixed OOF predictions",
+    "limitations": "Conditional exploratory intervals; overlapping CV training, training variability and patient clusters not represented; not confirmatory tests"
+  }
+}

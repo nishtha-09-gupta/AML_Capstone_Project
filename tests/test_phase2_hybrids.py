@@ -63,3 +63,14 @@ def test_training_cache_keys_include_target_values(sample):
     assert cache.fit('BN',None,x,y) is first
     changed=cache.fit('BN',None,x,1-y)
     assert changed is not first
+
+
+def test_exact_stack_explanation_reconstructs_probabilities(sample):
+    x,y=sample
+    package=base_pair(x,y,max_epochs=2)
+    for component in ['both','bn','mlp']:
+        model=CalibratedHybrid(component=component,max_epochs=2).fit(x,y,package)
+        explanation=model.explain(x)
+        np.testing.assert_allclose(explanation.probability,model.predict_proba(x)[:,1],atol=1e-12)
+        np.testing.assert_allclose(explanation.combined_log_odds,explanation.intercept+
+            explanation.bn_log_odds_contribution+explanation.mlp_log_odds_contribution,atol=1e-12)

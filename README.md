@@ -273,3 +273,20 @@ D-only hospital holdouts, Cleveland-only CV, saved models and result verificatio
 The standalone MLP was selected by the predeclared S-only criterion. The functioning
 hybrid did not demonstrate added value over the MLP. All historical T results remain
 retrospective; no clinical benefit or bonus-mark outcome is claimed.
+
+### Hybrid improvement follow-up
+
+A separate exploratory nested-CV study on S only adds residual BN correction and
+a calibrated BN–MLP stack, with calibrated single-base controls. The stack has
+the lowest mean Brier among all seven tested families, improving by 1.80% against
+tuned MLP and 0.89% against calibrated BN. Every seed mean improves on both
+controls, while conditional intervals include zero. Original T scores and
+negative feature-hybrid findings remain preserved.
+
+- [Follow-up methods, evidence and run instructions](docs/phase2/hybrid_followup_guide.md)
+- [All follow-up results](artifacts/phase2/hybrid_followup_v1/RESULTS.md)
+- [Updated report](docs/phase2/phase2_report_with_followup.pdf) and [LaTeX](docs/phase2/phase2_report_with_followup.tex)
+- [Updated presentation](docs/phase2/phase2_presentation_with_followup.pptx)
+
+The observed gain supports a stronger technical hybrid case; it does not establish
+external superiority, clinical benefit or guaranteed bonus marks.

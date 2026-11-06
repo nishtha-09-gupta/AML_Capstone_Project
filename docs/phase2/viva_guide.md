@@ -33,3 +33,17 @@
 **What is the biggest limitation?** A small historical, merged dataset with an already-inspected holdout, uncertain patient linkage and hospital distribution shifts. Exact duplicate removal cannot prove independent patients. No prospective utility or causal claim follows.
 
 **What remains human work?** Confirm author names and contributions, understand the code, rehearse the presentation, answer the viva independently, and obtain faculty acceptance of the provisional graph and dataset scope.
+
+## Updated hybrid follow-up
+
+**What improved?** A new calibrated BN–MLP stack, evaluated separately on S-only nested CV, reduced mean Brier error relative to tuned MLP (1.80%) and calibrated BN (0.89%). It also has higher mean AUC, PR-AUC and F1 than tuned MLP in that study. Original T scores remain unchanged.
+
+**Why is the control important?** Calibrating BN alone also helps. Comparing against raw BN alone would overstate hybrid value. The stack's mean Brier is lower than both calibrated single-base controls, which is evidence that fusion adds something beyond calibration in this experiment.
+
+**How are fusion weights learned?** Penalized logistic regression fits fresh out-of-fold BN and MLP logits within each permitted training subset. Inner folds choose its penalty. Outer validation rows never fit bases, calibration, penalty or epoch count.
+
+**Can we say the hybrid always wins or secures marks?** No. Every seed mean improves on the strongest control, but not every fold does; the paired conditional interval includes zero. This is observed exploratory added value, not confirmation of universal superiority. Faculty assess the quality and marks.
+
+**What happened to residual learning?** It was implemented with zero initial correction to BN log-odds and tested under the same nested scheme. It did not match the calibrated stack; its unfavorable results remain available.
+
+**How can we explain a stack prediction?** Show the intercept plus BN and MLP log-odds contributions. Their sum passes through a sigmoid to reconstruct the prediction. These are model contributions, not medical or causal interpretations.

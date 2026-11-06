@@ -6,7 +6,7 @@ All paths below are relative to the repository root.
 | Rubric criterion | Delivered evidence | Status / qualification |
 |---|---|---|
 | Architecture Logic | `phase2_models.py`; report model section; presentation | Complete: two hidden layers, ReLU, sigmoid, BCE, explicit parameter counts and training-only early stopping |
-| Hybrid Innovation | Cross-fitted BN log-odds input; NB-assisted ablation; `literature_review.md` | Implemented and evaluated. Feature stacking is not claimed as a new algorithm; consistent added value was not demonstrated, so bonus marks cannot be guaranteed |
+| Hybrid Innovation | Cross-fitted BN log-odds input; NB-assisted ablation; `literature_review.md` | Implemented and evaluated. Feature stacking is not claimed as a new algorithm; the original feature hybrid showed no consistent gain. The follow-up calibrated stack shows lower nested Brier than all tested controls, with seed consistency; uncertainty remains and bonus marks are a faculty judgment |
 | Ablation Studies | `artifacts/phase2/full_run/cv_by_seed.csv`, `cv_summary.csv`, `evaluation_summary.csv` | Complete: plain MLP, BN-assisted MLP, NB-assisted MLP, no dropout, no weight decay; common folds, three seeds |
 | Deep Learning Literature Review | `docs/phase2/literature_review.md`; report references and slide notes | Complete: primary sources and applicability/limits documented |
 | DL Dataset & Regularization | `protocol.md`, `phase2_models.py`, training histories and split audits | Complete: target, predictors, missingness, scaling, encoding, dropout, weight decay and early stopping; patient independence cannot be proven without linkage |
@@ -41,3 +41,19 @@ investigation is present; demonstrated overall improvement is not.
 Remaining external requirements: faculty acceptance of the provisional graph,
 merged-CSV provenance/patient linkage clarification, confirmed team authorship,
 rehearsal, viva performance and any institution-specific report formatting rules.
+
+## Updated evidence from the hybrid follow-up
+
+The finite exploratory follow-up is documented in `hybrid_improvement_protocol.md`
+and `hybrid_followup_guide.md`. It adds two architectures, calibrated single-base
+controls, matched small tuning budgets, nested CV, three seeds and exact additive
+log-odds explanations. Its calibrated stack shows mean Brier 0.13913 versus
+0.14168 for tuned MLP and 0.14038 for calibrated BN. Every seed mean improves
+on both controls; conditional intervals include zero. All seven families and
+unfavorable residual results are retained.
+
+The updated report and 15-slide presentation use `with_followup` filenames.
+Follow-up verification covers 105 outer models and 12 S-only final models,
+excluding C/T from training and scoring. This supports observed added value
+beyond merely combining models, but remains exploratory evidence. The original
+35-model run and its negative feature-hybrid finding are unchanged.

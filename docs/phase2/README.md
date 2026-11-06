@@ -51,3 +51,10 @@ common CV folds, every seed's predictions, training histories and leakage audits
 BN bins/CPTs, final saved models/hashes, thresholds, metrics and verification.
 CV evaluates fixed configurations. Phase 1's nested tuning scores are contextual
 and have a different search budget; do not present them as identical procedures.
+
+## Latest follow-up
+
+Read [the hybrid follow-up guide](hybrid_followup_guide.md) for the improved
+calibrated stack and its S-only nested-CV evidence. Use the report and presentation
+with `with_followup` in their filenames for the combined account. The original
+files remain available as the original experiment's record.

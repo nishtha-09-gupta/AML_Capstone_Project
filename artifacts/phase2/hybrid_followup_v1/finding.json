@@ -1,0 +1,12 @@
+{
+  "best_hybrid": "Calibrated BN-MLP",
+  "strongest_single_base_control": "Calibrated BN",
+  "hybrid_brier": 0.13912770938959784,
+  "control_brier": 0.14038319974510713,
+  "brier_difference": -0.0012554903555092867,
+  "relative_brier_reduction_percent": 0.8943309155147285,
+  "lower_brier_than_every_control": true,
+  "every_seed_improves_on_strongest_control": true,
+  "evidence_scope": "Exploratory nested CV on S only, not new external or untouched validation",
+  "bonus_marks_guaranteed": false
+}

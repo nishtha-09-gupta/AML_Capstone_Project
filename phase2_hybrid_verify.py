@@ -34,6 +34,11 @@ def verify_detail(detail,training_ids,mapping):
 
 def verify(run):
     run=Path(run);config=read(run/'config.json')
+    if (run/'evidence_sha256.json').exists():
+        for relative,digest in read(run/'evidence_sha256.json').items():
+            file=run/relative
+            require(file.is_file() and hashlib.sha256(file.read_bytes()).hexdigest()==digest,
+                    'Changed follow-up evidence: '+relative)
     require(read(run/'manifest.json')['status']=='complete','Study incomplete')
     raw=load_dataset();by_id=raw.set_index('id',drop=False)
     require(hashlib.sha256((ROOT/'heart_disease_uci.csv').read_bytes()).hexdigest()==config['source_sha256'],
@@ -84,7 +89,30 @@ def verify(run):
         count+=1
     for _,part in rows.groupby(['model','seed']):
         require(part.source_id.is_unique and set(part.source_id)==allowed,'Incomplete outer OOF predictions')
-    result=dict(status='PASS',models_checked=count,smoke=config['smoke'],
+    final_count=0
+    if (run/'final_models/freeze.json').exists():
+        frozen=read(run/'final_models/freeze.json')
+        require(set(frozen['selection_ids'])==allowed and set(frozen['forbidden_ids'])==forbidden,
+                'Final inference model scope mismatch')
+        training=pd.read_csv(run/'final_models/training_roundtrip.csv')
+        details=read(run/'final_models/training_details.json')
+        for key,spec in frozen['models'].items():
+            file=run/'final_models'/spec['file']
+            require(hashlib.sha256(file.read_bytes()).hexdigest()==spec['sha256'],'Final model hash mismatch')
+            part=training[training.key==key]
+            require(part.source_id.is_unique and set(part.source_id)==allowed,'Final roundtrip rows mismatch')
+            model=joblib.load(file);features=clean_features(by_id.loc[part.source_id])
+            require(np.allclose(positive_probability(model,features),part.probability,atol=1e-7,rtol=0),
+                    'Final S-only model roundtrip mismatch')
+            verify_detail(details[key],allowed,mapping)
+            if isinstance(model,CalibratedHybrid):
+                require(np.allclose(model.explain(features).probability,part.probability,atol=1e-7,rtol=0),
+                        'Stack explanation does not reconstruct probability')
+            final_count+=1
+        for name in {s['model'] for s in frozen['models'].values()}:
+            require({s['seed'] for s in frozen['models'].values() if s['model']==name}==set(config['seeds']),
+                    'Final models must retain every seed')
+    result=dict(status='PASS',models_checked=count,final_models_checked=final_count,smoke=config['smoke'],
         source_rows=len(allowed),forbidden_rows_excluded=len(forbidden),
         checks=['Every model and seed has complete common outer-fold coverage',
                 'Inner search stays within outer training rows',
