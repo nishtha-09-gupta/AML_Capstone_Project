@@ -82,7 +82,7 @@ def verify(run):
     means = {n: {k: np.mean([r[k] for r in cv_scores if r['model']==n]) for k in ['f1','roc_auc']} for n in PRIMARY}
     winner = min(PRIMARY,key=lambda n:(-means[n]['f1'],-means[n]['roc_auc'],PRIMARY.index(n)))
     require(winner==selection['selected_family'], 'Family selection mismatch')
-    for folder in [run/'pooled',*sorted(run.glob('hospital_*'))]:
+    for folder in [run/'pooled',*sorted(p for p in run.glob('hospital_*') if p.is_dir())]:
         partitions = read(folder/'partitions.json')
         s,c,t = [set(partitions[k]) for k in ['selection','cutoff','evaluation']]
         require(not (s & c or s & t or c & t), 'Evaluation partition leakage')

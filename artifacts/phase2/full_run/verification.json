@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "saved_models_checked": 35,
+  "checks": [
+    "selection_cv: common folds, OOF scores and training isolation",
+    "cleveland_cv: common folds, OOF scores and training isolation",
+    "pooled: hashes, round trips, cutoffs, metrics and isolation",
+    "hospital_Cleveland: hashes, round trips, cutoffs, metrics and isolation",
+    "hospital_Hungary: hashes, round trips, cutoffs, metrics and isolation",
+    "hospital_Switzerland: hashes, round trips, cutoffs, metrics and isolation",
+    "hospital_VA_Long_Beach: hashes, round trips, cutoffs, metrics and isolation"
+  ],
+  "smoke": false
+}

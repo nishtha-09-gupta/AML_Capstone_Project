@@ -1,0 +1,23 @@
+{
+  "selected_family": "MLP",
+  "scores": {
+    "BN": {
+      "f1": 0.8179300807255652,
+      "roc_auc": 0.8780165272666445
+    },
+    "Naive Bayes": {
+      "f1": 0.8166665909534864,
+      "roc_auc": 0.8739983718077393
+    },
+    "MLP": {
+      "f1": 0.8296018450188549,
+      "roc_auc": 0.8686215531021152
+    },
+    "BN + MLP": {
+      "f1": 0.8283290848366831,
+      "roc_auc": 0.8677071707371474
+    }
+  },
+  "primary_saved_seed": 42,
+  "note": "No seed or ablation chosen using evaluation results"
+}

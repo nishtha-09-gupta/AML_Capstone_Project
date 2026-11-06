@@ -4,7 +4,7 @@ A reproducible Phase 1 machine learning project using the multi-center UCI Heart
 
 **Repository:** [AML_Capstone_Project](https://github.com/nishtha-09-gupta/AML_Capstone_Project)
 
-> This is an academic classification project. It predicts recorded disease presence (`num > 0`), not future cardiovascular risk. The models are not clinically validated. Neural-network implementation remains Phase 2.
+> This is an academic classification project. It predicts recorded disease presence (`num > 0`), not future cardiovascular risk. The models are not clinically validated. Phase 2 implementation and evidence are available on the Phase 2 branch; see the section below.
 
 ## Dataset
 
@@ -256,3 +256,20 @@ The underlying data is the **UCI Heart Disease dataset**, credited to Andras Jan
 Dataset DOI: [10.24432/C52P4X](https://doi.org/10.24432/C52P4X).
 
 Attribution to UCI does not by itself establish the exact acquisition and transformation history of the merged CSV supplied with this project.
+
+## Phase 2 — Deep Learning Evaluation
+
+The completed Phase 2 compares a pgmpy Bayesian Network, Naive Bayes, a small
+regularized PyTorch MLP, and a BN-assisted MLP with cross-fitted probabilities.
+It includes regularization and NB-input ablations, three neural seeds, calibration,
+D-only hospital holdouts, Cleveland-only CV, saved models and result verification.
+
+- [Setup, inference and reproduction](docs/phase2/README.md)
+- [Results and limitations](artifacts/phase2/full_run/RESULTS.md)
+- [Rubric evidence checklist](docs/phase2/rubric_checklist.md)
+- [IEEE report](docs/phase2/phase2_report.pdf) and [LaTeX source](docs/phase2/phase2_report.tex)
+- [Presentation](docs/phase2/phase2_presentation.pptx) and [viva guide](docs/phase2/viva_guide.md)
+
+The standalone MLP was selected by the predeclared S-only criterion. The functioning
+hybrid did not demonstrate added value over the MLP. All historical T results remain
+retrospective; no clinical benefit or bonus-mark outcome is claimed.
