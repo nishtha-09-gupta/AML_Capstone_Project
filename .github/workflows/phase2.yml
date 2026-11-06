@@ -14,6 +14,8 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-phase2.txt
       - run: python -m pip install -r requirements-phase2.txt
-      - run: python -m pytest tests/test_phase2_baselines.py tests/test_phase2_models.py tests/test_phase2_workflow.py -q
+      - run: python -m pytest tests/test_phase2_baselines.py tests/test_phase2_models.py tests/test_phase2_workflow.py tests/test_phase2_hybrids.py -q
       - run: python phase2_train.py --output /tmp/phase2-smoke --smoke
       - run: python phase2_verify.py /tmp/phase2-smoke
+      - run: python phase2_improve.py --output /tmp/phase2-hybrid-smoke --smoke
+      - run: python phase2_hybrid_verify.py /tmp/phase2-hybrid-smoke
