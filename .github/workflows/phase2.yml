@@ -1,0 +1,19 @@
+name: Phase 2 validation
+on:
+  push:
+    branches: [main, phase2-deep-learning]
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-phase2.txt
+      - run: python -m pip install -r requirements-phase2.txt
+      - run: python -m pytest tests/test_phase2_baselines.py tests/test_phase2_models.py tests/test_phase2_workflow.py -q
+      - run: python phase2_train.py --output /tmp/phase2-smoke --smoke
+      - run: python phase2_verify.py /tmp/phase2-smoke
