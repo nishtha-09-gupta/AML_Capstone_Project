@@ -45,3 +45,6 @@ env/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Separate Phase 2 environments
+.venv-*/

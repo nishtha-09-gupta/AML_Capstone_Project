@@ -1,0 +1,11 @@
+# Separate environment: preserve the recorded Phase 1 environment and models.
+numpy>=2.0,<3
+pandas>=2.2,<3
+scipy>=1.13,<2
+scikit-learn>=1.6,<1.9
+joblib>=1.4,<2
+threadpoolctl>=3.5,<4
+torch>=2.5,<2.11
+pgmpy==1.0.0
+matplotlib>=3.9,<4
+pytest>=8,<10
