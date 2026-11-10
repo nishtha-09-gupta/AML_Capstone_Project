@@ -1,10 +1,12 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{amsmath,amssymb,booktabs,graphicx,url}
 \title{Heart Disease Risk Modelling via Bayesian Networks and Feed Forward Neural Networks\\Phase 2: Evaluation and Exploratory Hybrid Improvement}
-\author{\IEEEauthorblockN{Project 15, Team T008}\IEEEauthorblockA{Academic capstone project\\Authorship and individual contributions to be confirmed by the team}}
+\author{\IEEEauthorblockN{Nishtha Gupta, Aditya Srivastava, Aanya Mehrotra}
+\IEEEauthorblockN{Shrijan Sanidhya, Abhay Mallik}
+\IEEEauthorblockA{Team T008, Section C\\Newton School of Technology, Rishihood University}}
 \begin{document}\maketitle
 \begin{abstract}
-We compare a discrete domain-structured Bayesian network (BN), Naive Bayes (NB), a regularized feed-forward multilayer perceptron (MLP), and a BN-assisted MLP on historical UCI heart-disease records. The hybrid appends a cross-fitted BN posterior log-odds feature to continuous and one-hot predictors. Fixed configurations are evaluated on common stratified folds, with training-only epoch selection and three neural seeds. The standalone MLP is selected by development cross-validation. Its primary retrospective ROC-AUC is 0.9071, F1 is 0.8411, and Brier score is 0.1236. The hybrid obtains 0.9020, 0.8358, and 0.1252 respectively. In that original experiment, ablations and hospital holdouts do not establish a consistent hybrid advantage. A separate exploratory S-only nested-CV follow-up compares residual correction and calibrated fusion. Its calibrated BN--MLP stack achieves Brier 0.13913 versus 0.14168 for tuned MLP and 0.14038 for calibrated BN, with improvement in every seed mean. Conditional intervals include zero; this is observed added value, not confirmatory superiority. The contribution is an implemented, leakage-aware comparison with auditable artifacts, rather than a claim of clinical utility or guaranteed hybrid improvement.
+We compare a discrete domain-structured Bayesian network (BN), Naive Bayes (NB), a regularized feed-forward multilayer perceptron (MLP), and a BN-assisted MLP on historical UCI heart-disease records. The hybrid appends a cross-fitted BN posterior log-odds feature to continuous and one-hot predictors. Fixed configurations are evaluated on common stratified folds, with training-only epoch selection and three neural seeds. The standalone MLP is selected by development cross-validation. Its primary retrospective ROC-AUC is 0.9071, F1 is 0.8411, and Brier score is 0.1236. The hybrid obtains 0.9020, 0.8358, and 0.1252 respectively. In that original experiment, ablations and hospital holdouts do not establish a consistent hybrid advantage. A separate exploratory S-only nested-CV follow-up compares residual correction and calibrated fusion. The residual hybrid did not improve probability scoring. Its calibrated BN--MLP stack achieves Brier 0.13913 versus 0.14168 for tuned MLP and 0.14038 for calibrated BN, with improvement in every seed mean. The reported conditional interval includes zero and does not establish statistical significance. This is an exploratory observed Brier improvement, not proven superiority. The contribution is an implemented, leakage-aware comparison with auditable artifacts, rather than a claim of clinical utility or guaranteed hybrid improvement.
 \end{abstract}
 \begin{IEEEkeywords}Bayesian network, MLP, cross-fitting, calibration, tabular classification\end{IEEEkeywords}
 \section{Introduction}
@@ -13,6 +15,9 @@ The project investigates whether explicit probabilistic independence assumptions
 The AML phase supplied a small provisional BN and conventional classifiers. Phase 2 adds the requested pgmpy implementation, an NB structural ablation, a PyTorch MLP, and a technically motivated hybrid. The hypothesis is that a class-conditional probabilistic summary may improve a flexible learner on limited data, while continuous inputs recover interactions lost through discretization.
 \section{Related Work}
 Pearl provides the foundational treatment of graphical probabilistic reasoning~\cite{pearl}. The UCI documentation describes the disease-presence target and the processed Cleveland subset~\cite{uci}. Gorishniy et al. demonstrate the importance of strong, consistently evaluated tabular neural baselines and find no universally superior learner~\cite{gorishniy}. Their ResNet and Transformer architectures are not implemented here. Grinsztajn et al. document competitive tree learners and tabular inductive biases~\cite{grinsztajn}, motivating our retained LR and RF controls. Dropout reduces co-adaptation~\cite{dropout}, but whether it helps here is an empirical ablation. Guo et al. distinguish discrimination from calibration~\cite{guo}; their findings motivate probability diagnostics, not an assumption that temperature scaling or any architecture guarantees clinical calibration.
+
+Medical hybrid research provides useful context without validating this project's specific method. Zhao et al. combine a Bayesian-network branch with graph-convolutional reasoning for medical image diagnosis~\cite{zhao}. Our tabular logistic stack has neither their image attributes nor attention-coupled graph network. Weng et al. evaluate neural and other learners for ten-year cardiovascular events using routine UK clinical data~\cite{weng}; our task classifies recorded disease presence and cannot inherit their prospective claims. The Super Learner framework uses cross-validation to combine predictors~\cite{superlearner}; our penalized two-logit stack is narrower and makes no claim to all its theory. Van Calster et al. emphasize calibration in medical prediction~\cite{vancalster}; our Brier and sparse reliability diagnostics do not establish clinical calibration.
+
 \section{Data and Preprocessing}
 The supplied merged CSV contains 920 records from four hospitals; exact-record deduplication ignoring row ID retains 918 (508 positive, 410 negative). It is not the independently acquired 303-record processed Cleveland dataset. The secondary Cleveland analysis uses only that site's development records from the supplied CSV.
 
@@ -89,10 +94,10 @@ The repository includes a dedicated Phase 2 dependency specification and run-spe
 The full-run verifier checks 35 saved models, including saved-model probability round trips, cutoff reconstruction, metric reconstruction, family selection, CV coverage and hospital isolation. Local testing passed 60 tests with 39 subtests; the unchanged Phase 1 Streamlit interface was excluded from this Phase 2 environment check. GitHub automation runs the dedicated Phase 2 tests and a smoke experiment on pushes. Smoke runs use three epochs and must never be cited as performance evidence.
 
 The application-independent batch inference command accepts the eleven eligible predictors, verifies model integrity and uses the saved cutoff without fitting. The original Phase 1 web interface retains its own model evidence. Only trusted joblib files should be loaded.
-\section{Limitations and Conclusions}
+\section{Original-Experiment Limitations}
 The experiment is small and retrospective, with uncertain patient linkage, incomplete merged-data provenance, hospital shifts and provisional graph assumptions. Row-level CV may exploit source-specific missingness. Calibration bins are sparse and descriptive. No prospective cohort, causal analysis, utility analysis or fairness validation is supplied.
 
-The hybrid is a successful implementation of a testable hypothesis, but the measured results do not establish added value over the MLP. That original experiment alone does not establish performance-based hybrid value. The follow-up below tests improvements separately. The main deliverable is a transparent BN--MLP probability comparison with controlled preprocessing, ablations and reproducible evidence. Faculty approval of domain assumptions, correct individual contribution attribution, and the team's own presentation and viva remain essential.
+In the original experiment, the feature hybrid was implemented successfully but did not establish added value over the MLP. That original experiment alone does not establish performance-based hybrid value. The follow-up below tests improvements separately. The main deliverable is a transparent BN--MLP probability comparison with controlled preprocessing, ablations and reproducible evidence. Faculty approval of domain assumptions, correct individual contribution attribution, and the team's own presentation and viva remain essential.
 
 \section{Exploratory Hybrid Improvement Study}
 \subsection{Motivation and Prespecified Follow-up}
@@ -100,9 +105,9 @@ The original BN-feature MLP did not improve the plain MLP consistently. After th
 
 The follow-up evaluates two mechanistically different hybrids. The BN residual MLP starts at the BN log-odds and learns a shrunken continuous correction, with a zero-initialized output layer. The calibrated BN--MLP stack estimates
 \begin{equation}
-P(Y=1\mid x)=\sigma\!\left(b+w_B\operatorname{logit}(q_B(x))+w_M\operatorname{logit}(q_M(x))\right).
+\begin{aligned}P(Y=1\mid x)&=\sigma\bigl(b+w_B\operatorname{logit}(q_B(x))\\&\qquad+w_M\operatorname{logit}(q_M(x))\bigr).\end{aligned}
 \end{equation}
-The coefficients are fitted using fresh cross-fitted predictions of both base learners within the current training subset. They represent a statistical fusion of coarse structured evidence and learned continuous interactions, not causal feature effects or probabilities that sum to one. This is standard stacking, not an algorithmic novelty claim. It follows established out-of-fold stacking practice~\cite{stacking}.
+Unlike a fixed arithmetic mean of probabilities, this stack learns an intercept and penalized log-odds coefficients. The coefficients are fitted using fresh cross-fitted predictions of both base learners within the current training subset. They represent a statistical fusion of coarse structured evidence and learned continuous interactions, not causal feature effects or probabilities that sum to one. This is standard stacking, not an algorithmic novelty claim. It follows established out-of-fold stacking practice~\cite{stacking}.
 
 Calibrated BN alone and calibrated MLP alone are essential controls: without them, gains caused by calibration could be wrongly attributed to hybridization. A tuned MLP and the original feature hybrid are also retained. Residual strength uses [0.25,0.5,1.0]; the equally budgeted MLP uses weight decay [0.0001,0.001,0.01]. Each logistic meta-model selects C from [0.1,1,10].
 
@@ -123,19 +128,35 @@ The best evaluated hybrid is Calibrated BN-MLP, with mean outer Brier 0.13913. T
 \begin{figure}[t]\centering\includegraphics[width=\columnwidth]{../../artifacts/phase2/hybrid_followup_v1/figures/nested_comparison.png}\caption{Follow-up nested Brier comparison. Lower values indicate better mean probability scoring on S-only outer validation records.}\end{figure}
 \begin{figure}[t]\centering\includegraphics[width=\columnwidth]{../../artifacts/phase2/hybrid_followup_v1/figures/consistency_coefficients.png}\caption{Seed consistency and fitted stacking coefficients. Coefficients are log-odds weights, not causal effects.}\end{figure}
 
-The full tables report all seven families, including any unfavorable residual-model results. Both single-base calibrated controls and tuned MLP are compared with each hybrid. Removing either component tests the value of fusion, whereas the residual alternative tests a different architectural rationale. Claims must name the metric and comparator rather than imply uniform superiority on every measure.
+The residual hybrid has mean Brier 0.14775, worse than tuned MLP (0.14168) and calibrated BN (0.14038); it did not improve probability scoring. Zero initialization starts the residual prediction at the BN baseline but does not guarantee improved generalization. The full tables retain all seven families and their unfavorable results. Both single-base calibrated controls and tuned MLP are compared with each hybrid. Removing either component tests the value of fusion, whereas the residual alternative tests a different architectural rationale. Claims must name the metric and comparator rather than imply uniform superiority on every measure.
+
+\subsection{Score Shift and Post-selection Uncertainty}
+OOF-to-full-fit score-distribution shift remains: the meta-model trains on out-of-fold base predictions, while inference uses base models refitted on the full permitted training subset. Their score distributions may differ. Cross-fitting prevents direct own-label leakage but cannot eliminate this sample-size shift.
+
+Post-selection uncertainty also remains: multiple follow-up alternatives were evaluated, and the best was identified using the same outer-CV results later used to describe it. Inner tuning protects within-fold selection, but does not make that post-selected outer score independent confirmation. The conditional interval includes zero, so statistically significant superiority is not established under the reported uncertainty analysis. No formal post-selection significance test was performed.
 
 \subsection{Interpretation and Validation}
 The follow-up verifies 105 saved outer-fold models, including exact fold coverage, inner-grid selection, meta cross-fitting, early-stop isolation, source IDs, model hashes and probability round trips. Final inference models are refitted on S only after the study; their training round-trip predictions are not reported as performance estimates. No C/T scores are produced for these revised architectures.
 
 Bootstrap resamples preserve source rows across all three seeds. The intervals condition on the saved outer predictions and omit overlapping-CV training dependence, patient clustering and research-selection uncertainty. The follow-up was initiated after earlier results; many comparisons remain exploratory. Observed improvements can support the technical value of the hybrid project, but do not establish external generalization, clinical utility, algorithmic novelty or guaranteed bonus marks. The graph, provenance and team-authorship qualifications still apply.
 
-\begin{thebibliography}{7}
+\section{Overall Conclusion}
+The original feature hybrid and residual correction did not demonstrate improved probability scoring over their relevant controls. The calibrated stack has the lowest observed follow-up Brier, 0.13913 versus 0.14038 for calibrated BN, but its conditional interval includes zero and statistically significant superiority is not established. OOF-to-full-fit shift and post-selection uncertainty qualify this exploratory result; it is neither external validation nor a novel algorithm. The comparison remains an academic prediction exercise with preserved negative findings.
+
+\section{Authorship and Accountability}
+The five author names were supplied by the team representative and the institution matches the Phase 1 report. A proposed, approximately balanced responsibility allocation is maintained separately in the repository for member confirmation. It is not evidence of completed work, and no equal-contribution or individual completed-work statement is asserted here. Each author should confirm actual contributions and review the complete submission before final hand-in.
+
+\begin{thebibliography}{11}
 \bibitem{pearl} J. Pearl, \emph{Probabilistic Reasoning in Intelligent Systems}. Morgan Kaufmann, 1988.
 \bibitem{uci} A. Janosi, W. Steinbrunn, M. Pfisterer and R. Detrano, ``Heart Disease,'' UCI Machine Learning Repository, 1988. doi:10.24432/C52P4X.
 \bibitem{gorishniy} Y. Gorishniy et al., ``Revisiting Deep Learning Models for Tabular Data,'' NeurIPS, 2021. arXiv:2106.11959.
-\bibitem{grinsztajn} L. Grinsztajn, E. Oyallon and G. Varoquaux, ``Why do tree-based models still outperform deep learning on tabular data?'' NeurIPS, 2022. arXiv:2207.08815.
+\bibitem{grinsztajn} L. Grinsztajn, E. Oyallon and G. Varoquaux, ``Why do tree-based models still outperform deep learning on typical tabular data?'' NeurIPS, 2022. arXiv:2207.08815.
 \bibitem{dropout} N. Srivastava et al., ``Dropout: A Simple Way to Prevent Neural Networks from Overfitting,'' JMLR, vol.15, pp.1929--1958, 2014.
 \bibitem{guo} C. Guo et al., ``On Calibration of Modern Neural Networks,'' ICML, PMLR 70, pp.1321--1330, 2017.
 \bibitem{stacking} scikit-learn developers, StackingClassifier, official documentation. \url{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingClassifier.html}.
+\bibitem{zhao} G. Zhao, Q. Feng, C. Chen, Z. Zhou and Y. Yu, ``Diagnose Like a Radiologist: Hybrid Neuro-Probabilistic Reasoning for Attribute-Based Medical Image Diagnosis,'' arXiv:2208.09282, 2022. doi:10.48550/arXiv.2208.09282.
+\bibitem{weng} S. F. Weng, J. Reps, J. Kai, J. M. Garibaldi and N. Qureshi, ``Can machine-learning improve cardiovascular risk prediction using routine clinical data?'' PLoS ONE, vol.12, no.4, e0174944, 2017. doi:10.1371/journal.pone.0174944.
+\bibitem{superlearner} M. J. van der Laan, E. C. Polley and A. E. Hubbard, ``Super learner,'' Statistical Applications in Genetics and Molecular Biology, vol.6, Article25, 2007. doi:10.2202/1544-6115.1309.
+\bibitem{vancalster} B. Van Calster, D. J. McLernon, M. van Smeden, L. Wynants and E. W. Steyerberg, ``Calibration: the Achilles heel of predictive analytics,'' BMC Medicine, vol.17, Article230, 2019. doi:10.1186/s12916-019-1466-7.
+
 \end{thebibliography}\end{document}

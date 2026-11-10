@@ -26,7 +26,7 @@
 
 **What is calibration?** Agreement between predicted probabilities and observed frequencies. Reliability bins show this descriptively; Brier is mean squared probability error. Good AUC alone does not imply calibration. Five bins and few records do not establish clinical calibration.
 
-**Did the hybrid help?** No consistent benefit over the standalone MLP was demonstrated. Read the actual results and paired intervals. Do not say that a working combination proves innovation or earns bonus marks automatically.
+**Did the original feature hybrid help?** No consistent benefit over the standalone MLP was demonstrated. Read the actual results and paired intervals. Do not say that a working combination proves innovation or earns bonus marks automatically.
 
 **What do the ablations establish?** They isolate the BN input, dropout, weight decay and BN versus NB summary under fixed settings. They are empirical comparisons, not proofs; their results must be read alongside seed variability.
 
@@ -47,3 +47,15 @@
 **What happened to residual learning?** It was implemented with zero initial correction to BN log-odds and tested under the same nested scheme. It did not match the calibrated stack; its unfavorable results remain available.
 
 **How can we explain a stack prediction?** Show the intercept plus BN and MLP log-odds contributions. Their sum passes through a sigmoid to reconstruct the prediction. These are model contributions, not medical or causal interpretations.
+
+## Submission review additions
+
+**Is the observed stack gain statistically significant?** The reported conditional interval includes zero, so it does not establish statistically significant superiority. No formal post-selection significance test was performed.
+
+**What is OOF-to-full-fit shift?** Fusion weights learn from base scores predicted without each training row. At inference, bases have been refitted on the complete permitted training subset, and their score distributions may differ.
+
+**What is post-selection uncertainty?** We compared several families and chose the best using the same outer-CV scores later used to describe it. Nested inner tuning does not make that winner's outer score independent confirmation.
+
+**Why zero-initialize the residual?** It starts at the BN log-odds baseline. Subsequent fitting can still overfit; zero initialization does not guarantee better generalization.
+
+**Who did what?** Use the actual five author names. The allocation in `contributions.md` is proposed, approximately balanced, and has Aanya leading implementation/integration. Each member must confirm actual work before presenting it as a completed contribution.

@@ -6,6 +6,21 @@ A reproducible Phase 1 machine learning project using the multi-center UCI Heart
 
 > This is an academic classification project. It predicts recorded disease presence (`num > 0`), not future cardiovascular risk. The models are not clinically validated. Phase 2 implementation and evidence are available on the Phase 2 branch; see the section below.
 
+## Phase 2 evaluation: start here
+
+- [Overview and run instructions](docs/phase2/README.md)
+- [Original protocol](docs/phase2/protocol.md) and [follow-up protocol](docs/phase2/hybrid_improvement_protocol.md)
+- [Architectures and rationale](docs/phase2/literature_review.md) · [MLP implementation](phase2_models.py) · [hybrids](phase2_hybrids.py)
+- [Results interpretation and limitations](docs/phase2/results_interpretation.md) · [saved follow-up results](artifacts/phase2/hybrid_followup_v1/RESULTS.md)
+- [Current IEEE report PDF](docs/phase2/phase2_report_with_followup.pdf) and [LaTeX source](docs/phase2/phase2_report_with_followup.tex)
+- [Current editable presentation](docs/phase2/phase2_presentation_with_followup.pptx) and [presentation PDF](docs/phase2/phase2_presentation_with_followup.pdf)
+- [Verification and audit findings](docs/phase2/submission_audit.md) · [verified literature](docs/phase2/literature_review.md)
+- [Team and proposed responsibility allocation](docs/phase2/contributions.md)
+
+The stack's modest Brier gain is exploratory. The reported conditional interval
+includes zero, so it does not establish statistical superiority. Preserve the
+original negative hybrid findings and the follow-up selection caveats.
+
 ## Dataset
 
 The supplied CSV contains **920 records and 16 columns** from Cleveland, Hungary, Switzerland, and VA Long Beach. Removing two exact duplicate records while ignoring the arbitrary row ID leaves **918 records**.

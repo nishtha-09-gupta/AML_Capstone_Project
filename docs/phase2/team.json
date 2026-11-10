@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "Nishtha Gupta",
+    "Aditya Srivastava",
+    "Aanya Mehrotra",
+    "Shrijan Sanidhya",
+    "Abhay Mallik"
+  ],
+  "institution": "Newton School of Technology, Rishihood University",
+  "team": "T008",
+  "section": "C",
+  "names_source": "User supplied names; institution/team from committed Phase 1 report",
+  "actual_contributions_confirmed": false,
+  "proposed_responsibilities": {
+    "Aanya Mehrotra": "Lead model implementation, integration and reproducibility coordination",
+    "Nishtha Gupta": "Data validation, exploratory analysis and BN domain-assumption review",
+    "Aditya Srivastava": "Baseline comparison, calibration controls and test review",
+    "Shrijan Sanidhya": "Nested validation, ablations and uncertainty-analysis review",
+    "Abhay Mallik": "Literature verification, report editing and presentation consistency"
+  }
+}

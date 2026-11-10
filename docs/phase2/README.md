@@ -58,3 +58,13 @@ Read [the hybrid follow-up guide](hybrid_followup_guide.md) for the improved
 calibrated stack and its S-only nested-CV evidence. Use the report and presentation
 with `with_followup` in their filenames for the combined account. The original
 files remain available as the original experiment's record.
+
+## Submission audit and current deliverables
+
+Use [the submission audit](submission_audit.md) for the main/Phase 2 comparison,
+non-overwriting verification commands and remaining team confirmations. The current
+[report](phase2_report_with_followup.pdf), [report source](phase2_report_with_followup.tex),
+[editable slides](phase2_presentation_with_followup.pptx) and
+[presentation PDF](phase2_presentation_with_followup.pdf) carry the updated names
+and limitations. [Proposed responsibilities](contributions.md) require confirmation
+of actual work. Earlier report/deck files are historical records.
