@@ -1,0 +1,44 @@
+{
+  "main_commit": "da62bdefc16004468de5d22e3d21dab815ea537c",
+  "phase2_commit_before_submission_edits": "88dc99852ff59679a6e1d9ec00c2853a9d9ccf8d",
+  "changed_existing_main_files": [
+    ".gitignore",
+    "README.md"
+  ],
+  "added_files": 286,
+  "deleted_files": [],
+  "protected_files_checked": 365,
+  "protected_sha256": "b94d953d1d9f5b313c5cd2409748a06d310654a4770488c0721a8da07a438227",
+  "protected_files_unchanged": true,
+  "full_run_verification": {
+    "status": "PASS",
+    "saved_models_checked": 35,
+    "checks": [
+      "selection_cv: common folds, OOF scores and training isolation",
+      "cleveland_cv: common folds, OOF scores and training isolation",
+      "pooled: hashes, round trips, cutoffs, metrics and isolation",
+      "hospital_Cleveland: hashes, round trips, cutoffs, metrics and isolation",
+      "hospital_Hungary: hashes, round trips, cutoffs, metrics and isolation",
+      "hospital_Switzerland: hashes, round trips, cutoffs, metrics and isolation",
+      "hospital_VA_Long_Beach: hashes, round trips, cutoffs, metrics and isolation"
+    ],
+    "smoke": false
+  },
+  "followup_verification": {
+    "status": "PASS",
+    "models_checked": 105,
+    "final_models_checked": 12,
+    "smoke": false,
+    "source_rows": 550,
+    "forbidden_rows_excluded": 368,
+    "checks": [
+      "Every model and seed has complete common outer-fold coverage",
+      "Inner search stays within outer training rows",
+      "Meta cross-fitting and early stopping exclude validation rows",
+      "C and T never enter training or scoring",
+      "Model hashes, round trips, targets, metrics and grid selections reconstruct"
+    ],
+    "scope": "Exploratory follow-up after original results; not untouched confirmation"
+  },
+  "tests": "..................................................................                                        [100%]\n66 passed, 39 subtests passed in 17.22s"
+}

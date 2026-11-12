@@ -1,0 +1,101 @@
+{
+  "smoke": false,
+  "model_order": [
+    "BN",
+    "Naive Bayes",
+    "MLP",
+    "BN + MLP",
+    "Logistic regression",
+    "Random forest",
+    "MLP no dropout",
+    "MLP no weight decay",
+    "NB + MLP"
+  ],
+  "primary_order": [
+    "BN",
+    "Naive Bayes",
+    "MLP",
+    "BN + MLP"
+  ],
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "folds": 5,
+  "selection_metric": "mean fold F1 at 0.5 across all declared seeds",
+  "models": {
+    "MLP": {
+      "batch_size": 32,
+      "dropout": 0.2,
+      "hidden": [
+        32,
+        16
+      ],
+      "hybrid": "none",
+      "learning_rate": 0.001,
+      "max_epochs": 150,
+      "patience": 20,
+      "random_state": 42,
+      "weight_decay": 0.001
+    },
+    "BN + MLP": {
+      "batch_size": 32,
+      "dropout": 0.2,
+      "hidden": [
+        32,
+        16
+      ],
+      "hybrid": "bn",
+      "learning_rate": 0.001,
+      "max_epochs": 150,
+      "patience": 20,
+      "random_state": 42,
+      "weight_decay": 0.001
+    },
+    "MLP no dropout": {
+      "batch_size": 32,
+      "dropout": 0,
+      "hidden": [
+        32,
+        16
+      ],
+      "hybrid": "none",
+      "learning_rate": 0.001,
+      "max_epochs": 150,
+      "patience": 20,
+      "random_state": 42,
+      "weight_decay": 0.001
+    },
+    "MLP no weight decay": {
+      "batch_size": 32,
+      "dropout": 0.2,
+      "hidden": [
+        32,
+        16
+      ],
+      "hybrid": "none",
+      "learning_rate": 0.001,
+      "max_epochs": 150,
+      "patience": 20,
+      "random_state": 42,
+      "weight_decay": 0
+    },
+    "NB + MLP": {
+      "batch_size": 32,
+      "dropout": 0.2,
+      "hidden": [
+        32,
+        16
+      ],
+      "hybrid": "nb",
+      "learning_rate": 0.001,
+      "max_epochs": 150,
+      "patience": 20,
+      "random_state": 42,
+      "weight_decay": 0.001
+    }
+  },
+  "source_sha256": "e76825d8d9ca0b9491ac1aef9261020c8eb6ab39315b65185a47cf619bc89da0",
+  "protocol_sha256": "07a25a7bda41e51931b3918c9f157159b5f8ddc210c3d7ff07e3fccc2961d525"
+}

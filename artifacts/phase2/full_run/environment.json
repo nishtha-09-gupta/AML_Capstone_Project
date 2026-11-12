@@ -1,0 +1,17 @@
+{
+  "python": "3.14.2",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.4.2",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.8.0",
+    "torch": "2.10.0",
+    "pgmpy": "1.0.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.17.0",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0",
+    "pytest": "9.0.3"
+  },
+  "commit": "9c54bfe64779805a168e3e0d637e6a5e9ca6ff9e"
+}

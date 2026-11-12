@@ -1,0 +1,6827 @@
+[
+  {
+    "model": "BN",
+    "seed": 42,
+    "fold": 0,
+    "parameter": null,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8412698412698413,
+    "recall": 0.8833333333333333,
+    "specificity": 0.8,
+    "f1": 0.8617886178861789,
+    "roc_auc": 0.9078333333333334,
+    "average_precision": 0.916314942819646,
+    "brier": 0.12635631465567543,
+    "log_loss": 0.42156817329331203,
+    "confusion_matrix": [
+      [
+        40,
+        10
+      ],
+      [
+        7,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9155188870098337,
+    "sensitivity": 0.8833333333333333,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 39,
+        "predicted": 0.03500448767009454,
+        "observed": 0.1282051282051282
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.2882740153876866,
+        "observed": 0.14285714285714285
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 6,
+        "predicted": 0.5435841845337717,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7006202631766528,
+        "observed": 0.7857142857142857
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 44,
+        "predicted": 0.9532976664467033,
+        "observed": 0.8863636363636364
+      }
+    ],
+    "ece_5_bins": 0.08661501473235723
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 42,
+    "fold": 0,
+    "parameter": 0.01,
+    "accuracy": 0.8545454545454545,
+    "precision": 0.8333333333333334,
+    "recall": 0.9166666666666666,
+    "specificity": 0.78,
+    "f1": 0.873015873015873,
+    "roc_auc": 0.9186666666666667,
+    "average_precision": 0.9322207335338039,
+    "brier": 0.11618048894237343,
+    "log_loss": 0.37036099337503287,
+    "confusion_matrix": [
+      [
+        39,
+        11
+      ],
+      [
+        5,
+        55
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9315862732029129,
+    "sensitivity": 0.9166666666666666,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.086745368590688,
+        "observed": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.2725242631775992,
+        "observed": 0.14285714285714285
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 6,
+        "predicted": 0.5019838015238444,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7029209070735507,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.8925973494847615,
+        "observed": 0.9111111111111111
+      }
+    ],
+    "ece_5_bins": 0.04050841563465919
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 42,
+    "fold": 0,
+    "parameter": null,
+    "accuracy": 0.8272727272727273,
+    "precision": 0.7971014492753623,
+    "recall": 0.9166666666666666,
+    "specificity": 0.72,
+    "f1": 0.8527131782945736,
+    "roc_auc": 0.9123333333333332,
+    "average_precision": 0.9287322845521783,
+    "brier": 0.12041458888438632,
+    "log_loss": 0.3850036530358592,
+    "confusion_matrix": [
+      [
+        36,
+        14
+      ],
+      [
+        5,
+        55
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9280832237930535,
+    "sensitivity": 0.9166666666666666,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.09047348306260326,
+        "observed": 0.12121212121212122
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.26201506331562996,
+        "observed": 0.125
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.553599762916565,
+        "observed": 0.2
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.7348585317009374,
+        "observed": 0.7368421052631579
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.8736958424250285,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.041816994259980554
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 42,
+    "fold": 0,
+    "parameter": 0.25,
+    "accuracy": 0.8272727272727273,
+    "precision": 0.8059701492537313,
+    "recall": 0.9,
+    "specificity": 0.74,
+    "f1": 0.8503937007874016,
+    "roc_auc": 0.8986666666666667,
+    "average_precision": 0.9060923663919879,
+    "brier": 0.12985292050868094,
+    "log_loss": 0.4108123189536936,
+    "confusion_matrix": [
+      [
+        37,
+        13
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9050401864933745,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 36,
+        "predicted": 0.06813352873238425,
+        "observed": 0.1111111111111111
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 5,
+        "predicted": 0.27694029808044435,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.530915460803292,
+        "observed": 0.5454545454545454
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 11,
+        "predicted": 0.7000664689324119,
+        "observed": 0.5454545454545454
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 47,
+        "predicted": 0.9274723250815209,
+        "observed": 0.8936170212765957
+      }
+    ],
+    "ece_5_bins": 0.05103956221348862
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 42,
+    "fold": 0,
+    "parameter": 10.0,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8412698412698413,
+    "recall": 0.8833333333333333,
+    "specificity": 0.8,
+    "f1": 0.8617886178861789,
+    "roc_auc": 0.9078333333333334,
+    "average_precision": 0.916314942819646,
+    "brier": 0.12237305610099368,
+    "log_loss": 0.3889512904356498,
+    "confusion_matrix": [
+      [
+        40,
+        10
+      ],
+      [
+        7,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9155188870098337,
+    "sensitivity": 0.8833333333333333,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.10466471104602883,
+        "observed": 0.0967741935483871
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.2808833270607802,
+        "observed": 0.2727272727272727
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.5175833906789762,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.68425162821575,
+        "observed": 0.7368421052631579
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 39,
+        "predicted": 0.9035577720370824,
+        "observed": 0.9230769230769231
+      }
+    ],
+    "ece_5_bins": 0.02973293183036158
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 42,
+    "fold": 0,
+    "parameter": 10.0,
+    "accuracy": 0.8545454545454545,
+    "precision": 0.8333333333333334,
+    "recall": 0.9166666666666666,
+    "specificity": 0.78,
+    "f1": 0.873015873015873,
+    "roc_auc": 0.9186666666666667,
+    "average_precision": 0.9323801700438595,
+    "brier": 0.11616320937458546,
+    "log_loss": 0.37317235942562543,
+    "confusion_matrix": [
+      [
+        39,
+        11
+      ],
+      [
+        5,
+        55
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9317489637460165,
+    "sensitivity": 0.9166666666666666,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.09765223620955449,
+        "observed": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.281156153032713,
+        "observed": 0.14285714285714285
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 6,
+        "predicted": 0.49192417189124105,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 24,
+        "predicted": 0.7064069033352888,
+        "observed": 0.7083333333333334
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 39,
+        "predicted": 0.885414327291104,
+        "observed": 0.9230769230769231
+      }
+    ],
+    "ece_5_bins": 0.03740488751865091
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 42,
+    "fold": 0,
+    "parameter": 1.0,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8307692307692308,
+    "recall": 0.9,
+    "specificity": 0.78,
+    "f1": 0.864,
+    "roc_auc": 0.9106666666666667,
+    "average_precision": 0.9219497917661078,
+    "brier": 0.12022953263315468,
+    "log_loss": 0.381747459999686,
+    "confusion_matrix": [
+      [
+        39,
+        11
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9211534648110632,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.09816193059741182,
+        "observed": 0.0967741935483871
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.27417101229099305,
+        "observed": 0.18181818181818182
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.5027597278707366,
+        "observed": 0.42857142857142855
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 23,
+        "predicted": 0.6903181589891026,
+        "observed": 0.7391304347826086
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9040777508361181,
+        "observed": 0.9210526315789473
+      }
+    ],
+    "ece_5_bins": 0.0304176990026727
+  },
+  {
+    "model": "BN",
+    "seed": 42,
+    "fold": 1,
+    "parameter": null,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.7936507936507936,
+    "recall": 0.819672131147541,
+    "specificity": 0.7346938775510204,
+    "f1": 0.8064516129032258,
+    "roc_auc": 0.8584810973569756,
+    "average_precision": 0.8513873247670473,
+    "brier": 0.15577056437235592,
+    "log_loss": 0.547077469401753,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8491401755059764,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.05368201405353567,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 12,
+        "predicted": 0.30053321060902294,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.5014396440207494,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 13,
+        "predicted": 0.6845831150038912,
+        "observed": 0.6153846153846154
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 47,
+        "predicted": 0.9604504209116601,
+        "observed": 0.851063829787234
+      }
+    ],
+    "ece_5_bins": 0.10141497333381738
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 42,
+    "fold": 1,
+    "parameter": 0.001,
+    "accuracy": 0.7545454545454545,
+    "precision": 0.7575757575757576,
+    "recall": 0.819672131147541,
+    "specificity": 0.673469387755102,
+    "f1": 0.7874015748031497,
+    "roc_auc": 0.8226831716293074,
+    "average_precision": 0.8233648636632109,
+    "brier": 0.1596646315053488,
+    "log_loss": 0.5045269290151417,
+    "confusion_matrix": [
+      [
+        33,
+        16
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8208873645306642,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.07686938504399411,
+        "observed": 0.034482758620689655
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.315718462690711,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 14,
+        "predicted": 0.4972459652594158,
+        "observed": 0.6428571428571429
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7345770852906364,
+        "observed": 0.8571428571428571
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9115615036752489,
+        "observed": 0.7777777777777778
+      }
+    ],
+    "ece_5_bins": 0.11343826747668738
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 42,
+    "fold": 1,
+    "parameter": null,
+    "accuracy": 0.7727272727272727,
+    "precision": 0.7727272727272727,
+    "recall": 0.8360655737704918,
+    "specificity": 0.6938775510204082,
+    "f1": 0.8031496062992126,
+    "roc_auc": 0.836734693877551,
+    "average_precision": 0.849613056521654,
+    "brier": 0.15582998914354143,
+    "log_loss": 0.48770726297229056,
+    "confusion_matrix": [
+      [
+        34,
+        15
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8478934735296126,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.07896381912512644,
+        "observed": 0.03225806451612903
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 5,
+        "predicted": 0.336793041229248,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.47613963755694305,
+        "observed": 0.8181818181818182
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7062249481678009,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9166768934991625,
+        "observed": 0.8
+      }
+    ],
+    "ece_5_bins": 0.11353533134626394
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 42,
+    "fold": 1,
+    "parameter": 0.5,
+    "accuracy": 0.7909090909090909,
+    "precision": 0.7878787878787878,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7142857142857143,
+    "f1": 0.8188976377952756,
+    "roc_auc": 0.8494479759116761,
+    "average_precision": 0.8463175146364266,
+    "brier": 0.15910986024122228,
+    "log_loss": 0.5252622221213773,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8441292093535373,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 32,
+        "predicted": 0.08325450730626471,
+        "observed": 0.0625
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.27158358693122864,
+        "observed": 0.5454545454545454
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5336622223258018,
+        "observed": 0.875
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7078428311007363,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9511054886711968,
+        "observed": 0.8
+      }
+    ],
+    "ece_5_bins": 0.12088522139767352
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 42,
+    "fold": 1,
+    "parameter": 1.0,
+    "accuracy": 0.7909090909090909,
+    "precision": 0.796875,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7346938775510204,
+    "f1": 0.816,
+    "roc_auc": 0.8584810973569756,
+    "average_precision": 0.8513873247670473,
+    "brier": 0.14769572573206938,
+    "log_loss": 0.4672154219803545,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8491401755059764,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 23,
+        "predicted": 0.12553207533627164,
+        "observed": 0.0
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 14,
+        "predicted": 0.29476860783104614,
+        "observed": 0.2857142857142857
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 18,
+        "predicted": 0.49445210825051217,
+        "observed": 0.6111111111111112
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7002699173220241,
+        "observed": 0.7777777777777778
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 37,
+        "predicted": 0.9231197116658912,
+        "observed": 0.8648648648648649
+      }
+    ],
+    "ece_5_bins": 0.07876755557910196
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 42,
+    "fold": 1,
+    "parameter": 10.0,
+    "accuracy": 0.7545454545454545,
+    "precision": 0.765625,
+    "recall": 0.8032786885245902,
+    "specificity": 0.6938775510204082,
+    "f1": 0.784,
+    "roc_auc": 0.8226831716293074,
+    "average_precision": 0.8233648636632109,
+    "brier": 0.15771150941968218,
+    "log_loss": 0.4894125775092416,
+    "confusion_matrix": [
+      [
+        34,
+        15
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8208873645306642,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.1072381091666814,
+        "observed": 0.034482758620689655
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.33074706493540773,
+        "observed": 0.5714285714285714
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 15,
+        "predicted": 0.4883614924772035,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.7192683703729091,
+        "observed": 0.8421052631578947
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.8900677566076143,
+        "observed": 0.775
+      }
+    ],
+    "ece_5_bins": 0.11278058683042864
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 42,
+    "fold": 1,
+    "parameter": 0.1,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.7846153846153846,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7142857142857143,
+    "f1": 0.8095238095238095,
+    "roc_auc": 0.8511207761793241,
+    "average_precision": 0.8468209656384145,
+    "brier": 0.1480340766375482,
+    "log_loss": 0.4662524494824425,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8445456663986268,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 25,
+        "predicted": 0.11737124678367694,
+        "observed": 0.04
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.2807264553084239,
+        "observed": 0.2727272727272727
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 19,
+        "predicted": 0.5102926934466477,
+        "observed": 0.6842105263157895
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.7181826877708178,
+        "observed": 0.6842105263157895
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 36,
+        "predicted": 0.9199572331480262,
+        "observed": 0.8611111111111112
+      }
+    ],
+    "ece_5_bins": 0.07355129512247965
+  },
+  {
+    "model": "BN",
+    "seed": 42,
+    "fold": 2,
+    "parameter": null,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8360655737704918,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7959183673469388,
+    "f1": 0.8360655737704918,
+    "roc_auc": 0.8922716627634659,
+    "average_precision": 0.9009454114161037,
+    "brier": 0.13979645817713712,
+    "log_loss": 0.45877006177914675,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8997120330721605,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 42,
+        "predicted": 0.0521986547291178,
+        "observed": 0.16666666666666666
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 5,
+        "predicted": 0.3074802567755551,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 4,
+        "predicted": 0.5126089698060157,
+        "observed": 0.25
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7082474191307938,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 49,
+        "predicted": 0.9420705470159381,
+        "observed": 0.8979591836734694
+      }
+    ],
+    "ece_5_bins": 0.09604201901647492
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 42,
+    "fold": 2,
+    "parameter": 0.0001,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8125,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7551020408163265,
+    "f1": 0.832,
+    "roc_auc": 0.8835731013716962,
+    "average_precision": 0.8816874202772652,
+    "brier": 0.13076157410786218,
+    "log_loss": 0.4196634581468854,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8796691815993277,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.10399887338280678,
+        "observed": 0.0967741935483871
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.29215575009584427,
+        "observed": 0.2
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 14,
+        "predicted": 0.5235474790845599,
+        "observed": 0.7857142857142857
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.7191388536902035,
+        "observed": 0.6470588235294118
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9011038008489107,
+        "observed": 0.8947368421052632
+      }
+    ],
+    "ece_5_bins": 0.05711966194212437
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 42,
+    "fold": 2,
+    "parameter": null,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8253968253968254,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7755102040816326,
+    "f1": 0.8387096774193549,
+    "roc_auc": 0.8919371027099364,
+    "average_precision": 0.8961855786728156,
+    "brier": 0.13053238945323176,
+    "log_loss": 0.41330801305023646,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8947507071874761,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.0989894127529679,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 9,
+        "predicted": 0.2862453907728195,
+        "observed": 0.4444444444444444
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 9,
+        "predicted": 0.50783485505316,
+        "observed": 0.5555555555555556
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.7071493518979926,
+        "observed": 0.6842105263157895
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.8711701080203056,
+        "observed": 0.9
+      }
+    ],
+    "ece_5_bins": 0.033717834306034186
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 42,
+    "fold": 2,
+    "parameter": 0.25,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8059701492537313,
+    "recall": 0.8852459016393442,
+    "specificity": 0.7346938775510204,
+    "f1": 0.84375,
+    "roc_auc": 0.8869187019069923,
+    "average_precision": 0.890716372384501,
+    "brier": 0.13302679602336318,
+    "log_loss": 0.4169595200305774,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        7,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8892360769090961,
+    "sensitivity": 0.8852459016393442,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.06945063988678157,
+        "observed": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.25869409926235676,
+        "observed": 0.25
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 9,
+        "predicted": 0.5509312980704837,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.6897909606204313,
+        "observed": 0.7058823529411765
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 42,
+        "predicted": 0.9177254097802299,
+        "observed": 0.8809523809523809
+      }
+    ],
+    "ece_5_bins": 0.04152609305032955
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 42,
+    "fold": 2,
+    "parameter": 1.0,
+    "accuracy": 0.8,
+    "precision": 0.8095238095238095,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8225806451612904,
+    "roc_auc": 0.8922716627634659,
+    "average_precision": 0.9009454114161037,
+    "brier": 0.1304099371857126,
+    "log_loss": 0.4120971059729891,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8997120330721605,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 26,
+        "predicted": 0.10704799575464309,
+        "observed": 0.07692307692307693
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 16,
+        "predicted": 0.27551319440335376,
+        "observed": 0.3125
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.49416235283144916,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 23,
+        "predicted": 0.7186774083677048,
+        "observed": 0.782608695652174
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 35,
+        "predicted": 0.8940445492153186,
+        "observed": 0.9142857142857143
+      }
+    ],
+    "ece_5_bins": 0.040868369931710814
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 42,
+    "fold": 2,
+    "parameter": 10.0,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8125,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7551020408163265,
+    "f1": 0.832,
+    "roc_auc": 0.882903981264637,
+    "average_precision": 0.8792381115864067,
+    "brier": 0.13178640847613698,
+    "log_loss": 0.42295267230026795,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8770244812372174,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 28,
+        "predicted": 0.11675454591121995,
+        "observed": 0.07142857142857142
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.2652484981214254,
+        "observed": 0.18181818181818182
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 17,
+        "predicted": 0.5097669834271472,
+        "observed": 0.7058823529411765
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.7083711312644804,
+        "observed": 0.6470588235294118
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 37,
+        "predicted": 0.8800371948983154,
+        "observed": 0.918918918918919
+      }
+    ],
+    "ece_5_bins": 0.07274322788042575
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 42,
+    "fold": 2,
+    "parameter": 0.1,
+    "accuracy": 0.8,
+    "precision": 0.8095238095238095,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8225806451612904,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.8928667533840569,
+    "brier": 0.1292268608428761,
+    "log_loss": 0.41151363436287025,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8912283778258305,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 27,
+        "predicted": 0.10931499890233158,
+        "observed": 0.07407407407407407
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 15,
+        "predicted": 0.27966886052316436,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.5012775652986304,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 22,
+        "predicted": 0.7104850327775007,
+        "observed": 0.7272727272727273
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 36,
+        "predicted": 0.8889662848580578,
+        "observed": 0.9166666666666666
+      }
+    ],
+    "ece_5_bins": 0.028507188540969924
+  },
+  {
+    "model": "BN",
+    "seed": 42,
+    "fold": 3,
+    "parameter": null,
+    "accuracy": 0.8,
+    "precision": 0.8421052631578947,
+    "recall": 0.7868852459016393,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8135593220338984,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.9002329560366099,
+    "brier": 0.13596763679362825,
+    "log_loss": 0.45902086488940763,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732184,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.05632102062696884,
+        "observed": 0.08823529411764706
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.3119317796407603,
+        "observed": 0.46153846153846156
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.4942618203945758,
+        "observed": 0.6363636363636364
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 7,
+        "predicted": 0.7239966840681019,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9636877497230096,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.07297288786386356
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 42,
+    "fold": 3,
+    "parameter": 0.01,
+    "accuracy": 0.8272727272727273,
+    "precision": 0.8620689655172413,
+    "recall": 0.819672131147541,
+    "specificity": 0.8367346938775511,
+    "f1": 0.8403361344537815,
+    "roc_auc": 0.9003011040481766,
+    "average_precision": 0.9092103766824295,
+    "brier": 0.12558015603161038,
+    "log_loss": 0.40900508978183653,
+    "confusion_matrix": [
+      [
+        41,
+        8
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9080567790698438,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 21,
+        "predicted": 0.1387711325216861,
+        "observed": 0.09523809523809523
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 17,
+        "predicted": 0.29772217133465934,
+        "observed": 0.058823529411764705
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.4888128028029487,
+        "observed": 0.5714285714285714
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 9,
+        "predicted": 0.7111490302615695,
+        "observed": 0.8888888888888888
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 42,
+        "predicted": 0.9190381268660227,
+        "observed": 0.9047619047619048
+      }
+    ],
+    "ece_5_bins": 0.08099692629819565
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 42,
+    "fold": 3,
+    "parameter": null,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8253968253968254,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7755102040816326,
+    "f1": 0.8387096774193549,
+    "roc_auc": 0.8855804616928739,
+    "average_precision": 0.8889232868600396,
+    "brier": 0.12693193254380286,
+    "log_loss": 0.41637714645013674,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8873221654406729,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 25,
+        "predicted": 0.13309040248394013,
+        "observed": 0.08
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.2882438193668019,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 16,
+        "predicted": 0.49555702321231365,
+        "observed": 0.5625
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7009889284769694,
+        "observed": 0.7222222222222222
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.9064858198165894,
+        "observed": 0.9
+      }
+    ],
+    "ece_5_bins": 0.04736965258013119
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 42,
+    "fold": 3,
+    "parameter": 0.25,
+    "accuracy": 0.8,
+    "precision": 0.8421052631578947,
+    "recall": 0.7868852459016393,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8135593220338984,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.90023295603661,
+    "brier": 0.13592692475706833,
+    "log_loss": 0.4589521276905578,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732185,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.05644712375257822,
+        "observed": 0.08823529411764706
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.3124495893716812,
+        "observed": 0.46153846153846156
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.49483258344910364,
+        "observed": 0.6363636363636364
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 7,
+        "predicted": 0.7244771122932434,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9637567255232069,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.07287442861124875
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 42,
+    "fold": 3,
+    "parameter": 10.0,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8448275862068966,
+    "recall": 0.8032786885245902,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8235294117647058,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.9002329560366099,
+    "brier": 0.1333913534788567,
+    "log_loss": 0.42415662716810065,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732184,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 20,
+        "predicted": 0.12160047534885436,
+        "observed": 0.1
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.29089644031729706,
+        "observed": 0.10526315789473684
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.499601620977871,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.7182044673031958,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9133404800840028,
+        "observed": 0.8947368421052632
+      }
+    ],
+    "ece_5_bins": 0.07778084061840179
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 42,
+    "fold": 3,
+    "parameter": 0.1,
+    "accuracy": 0.8272727272727273,
+    "precision": 0.8620689655172413,
+    "recall": 0.819672131147541,
+    "specificity": 0.8367346938775511,
+    "f1": 0.8403361344537815,
+    "roc_auc": 0.9009702241552359,
+    "average_precision": 0.9096055870277737,
+    "brier": 0.12829374435600116,
+    "log_loss": 0.41648897924663164,
+    "confusion_matrix": [
+      [
+        41,
+        8
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9084542912492654,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 15,
+        "predicted": 0.14764253178563938,
+        "observed": 0.06666666666666667
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 21,
+        "predicted": 0.28035101554761865,
+        "observed": 0.047619047619047616
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 24,
+        "predicted": 0.48609515326325364,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 9,
+        "predicted": 0.706496659782136,
+        "observed": 0.8888888888888888
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 41,
+        "predicted": 0.8958006337406151,
+        "observed": 0.9024390243902439
+      }
+    ],
+    "ece_5_bins": 0.09408572457783683
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 42,
+    "fold": 3,
+    "parameter": 0.1,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.847457627118644,
+    "recall": 0.819672131147541,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8333333333333334,
+    "roc_auc": 0.8932753429240547,
+    "average_precision": 0.9025730899299362,
+    "brier": 0.13140073924223408,
+    "log_loss": 0.42025619759573407,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9012895392595373,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 19,
+        "predicted": 0.1219440471851532,
+        "observed": 0.10526315789473684
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 20,
+        "predicted": 0.29058487393904986,
+        "observed": 0.1
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.5004705634303428,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.716445760767621,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9124964111714019,
+        "observed": 0.8947368421052632
+      }
+    ],
+    "ece_5_bins": 0.07905697307785026
+  },
+  {
+    "model": "BN",
+    "seed": 42,
+    "fold": 4,
+    "parameter": null,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.8245614035087719,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7959183673469388,
+    "f1": 0.7966101694915254,
+    "roc_auc": 0.8261960521913684,
+    "average_precision": 0.8525100453508362,
+    "brier": 0.18552518191344294,
+    "log_loss": 0.6419755943857772,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8507323294749798,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 39,
+        "predicted": 0.0511990296777478,
+        "observed": 0.23076923076923078
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.2946238333216282,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.45771555368183614,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7257775462834155,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.9558236135547082,
+        "observed": 0.8478260869565217
+      }
+    ],
+    "ece_5_bins": 0.12337489967374063
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 42,
+    "fold": 4,
+    "parameter": 0.01,
+    "accuracy": 0.7636363636363637,
+    "precision": 0.7966101694915254,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7551020408163265,
+    "f1": 0.7833333333333333,
+    "roc_auc": 0.825694212111074,
+    "average_precision": 0.8425139864433318,
+    "brier": 0.17104453937458028,
+    "log_loss": 0.5210215650474475,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8400514462342464,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.11909850519792788,
+        "observed": 0.20689655172413793
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 15,
+        "predicted": 0.2765119244654973,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.48985981941223145,
+        "observed": 0.5454545454545454
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 16,
+        "predicted": 0.6796239353716373,
+        "observed": 0.625
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 39,
+        "predicted": 0.9109635811585647,
+        "observed": 0.8717948717948718
+      }
+    ],
+    "ece_5_bins": 0.05828699181703004
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 42,
+    "fold": 4,
+    "parameter": null,
+    "accuracy": 0.7454545454545455,
+    "precision": 0.7704918032786885,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7142857142857143,
+    "f1": 0.7704918032786885,
+    "roc_auc": 0.8256942121110739,
+    "average_precision": 0.8363235991447258,
+    "brier": 0.17573014922173075,
+    "log_loss": 0.5361839213136192,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.833205071236312,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 32,
+        "predicted": 0.09168270917143673,
+        "observed": 0.21875
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.27364800572395326,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.5118026272817091,
+        "observed": 0.36363636363636365
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7160466015338898,
+        "observed": 0.6428571428571429
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 43,
+        "predicted": 0.8955592249715051,
+        "observed": 0.8604651162790697
+      }
+    ],
+    "ece_5_bins": 0.0863018294965679
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 42,
+    "fold": 4,
+    "parameter": 0.5,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.8245614035087719,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7959183673469388,
+    "f1": 0.7966101694915254,
+    "roc_auc": 0.8263633322181332,
+    "average_precision": 0.8532865768435023,
+    "brier": 0.18551407428177358,
+    "log_loss": 0.6417722967259839,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8511205952213129,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 39,
+        "predicted": 0.0515018611585196,
+        "observed": 0.23076923076923078
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.29591457545757294,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.4593654334545135,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.727005535364151,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.9560746680135312,
+        "observed": 0.8478260869565217
+      }
+    ],
+    "ece_5_bins": 0.12344180827071385
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 42,
+    "fold": 4,
+    "parameter": 10.0,
+    "accuracy": 0.7727272727272727,
+    "precision": 0.8103448275862069,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7755102040816326,
+    "f1": 0.7899159663865546,
+    "roc_auc": 0.8261960521913684,
+    "average_precision": 0.8525100453508362,
+    "brier": 0.16804592622790332,
+    "log_loss": 0.5098351761614708,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8507323294749798,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 25,
+        "predicted": 0.11836139632433419,
+        "observed": 0.16
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.2906027736479216,
+        "observed": 0.42105263157894735
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.48062863676380374,
+        "observed": 0.3
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7062047816079643,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 36,
+        "predicted": 0.9138769933062749,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.05772241955822144
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 42,
+    "fold": 4,
+    "parameter": 10.0,
+    "accuracy": 0.7636363636363637,
+    "precision": 0.7966101694915254,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7551020408163265,
+    "f1": 0.7833333333333333,
+    "roc_auc": 0.825694212111074,
+    "average_precision": 0.8425139864433318,
+    "brier": 0.16873686355009102,
+    "log_loss": 0.5118932141434573,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8400514462342464,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 23,
+        "predicted": 0.13321094573490883,
+        "observed": 0.13043478260869565
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 20,
+        "predicted": 0.27108409721241394,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 15,
+        "predicted": 0.5026102929803842,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.6932988550582153,
+        "observed": 0.5882352941176471
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 35,
+        "predicted": 0.8911212737631663,
+        "observed": 0.8857142857142857
+      }
+    ],
+    "ece_5_bins": 0.05525764118772131
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 42,
+    "fold": 4,
+    "parameter": 0.1,
+    "accuracy": 0.7545454545454545,
+    "precision": 0.7931034482758621,
+    "recall": 0.7540983606557377,
+    "specificity": 0.7551020408163265,
+    "f1": 0.773109243697479,
+    "roc_auc": 0.8330545332887254,
+    "average_precision": 0.8612959150673198,
+    "brier": 0.16637565842312563,
+    "log_loss": 0.5050419722702797,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        15,
+        46
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8594073113383044,
+    "sensitivity": 0.7540983606557377,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 24,
+        "predicted": 0.12018281670529422,
+        "observed": 0.20833333333333334
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 20,
+        "predicted": 0.2723487132676178,
+        "observed": 0.3
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 12,
+        "predicted": 0.48868190697915265,
+        "observed": 0.4166666666666667
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7196697538096452,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 34,
+        "predicted": 0.9148759605401479,
+        "observed": 0.9117647058823529
+      }
+    ],
+    "ece_5_bins": 0.0366545341093486
+  },
+  {
+    "model": "BN",
+    "seed": 52,
+    "fold": 0,
+    "parameter": null,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8412698412698413,
+    "recall": 0.8833333333333333,
+    "specificity": 0.8,
+    "f1": 0.8617886178861789,
+    "roc_auc": 0.9078333333333334,
+    "average_precision": 0.916314942819646,
+    "brier": 0.12635631465567543,
+    "log_loss": 0.42156817329331203,
+    "confusion_matrix": [
+      [
+        40,
+        10
+      ],
+      [
+        7,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9155188870098337,
+    "sensitivity": 0.8833333333333333,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 39,
+        "predicted": 0.03500448767009454,
+        "observed": 0.1282051282051282
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.2882740153876866,
+        "observed": 0.14285714285714285
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 6,
+        "predicted": 0.5435841845337717,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7006202631766528,
+        "observed": 0.7857142857142857
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 44,
+        "predicted": 0.9532976664467033,
+        "observed": 0.8863636363636364
+      }
+    ],
+    "ece_5_bins": 0.08661501473235723
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 52,
+    "fold": 0,
+    "parameter": 0.0001,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8181818181818182,
+    "recall": 0.9,
+    "specificity": 0.76,
+    "f1": 0.8571428571428571,
+    "roc_auc": 0.9076666666666667,
+    "average_precision": 0.9294856388604403,
+    "brier": 0.12082216591374724,
+    "log_loss": 0.38663246584629307,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9288835477197875,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 35,
+        "predicted": 0.10808089226484299,
+        "observed": 0.11428571428571428
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.3071836903691292,
+        "observed": 0.125
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.5617291586739677,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.7281195591477787,
+        "observed": 0.5882352941176471
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 43,
+        "predicted": 0.9001801845639251,
+        "observed": 0.9302325581395349
+      }
+    ],
+    "ece_5_bins": 0.058298352292992836
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 52,
+    "fold": 0,
+    "parameter": null,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8208955223880597,
+    "recall": 0.9166666666666666,
+    "specificity": 0.76,
+    "f1": 0.8661417322834646,
+    "roc_auc": 0.912,
+    "average_precision": 0.9286042480440081,
+    "brier": 0.11952053623195022,
+    "log_loss": 0.3857885046909517,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        5,
+        55
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9279589984928506,
+    "sensitivity": 0.9166666666666666,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 36,
+        "predicted": 0.09837169914195935,
+        "observed": 0.1111111111111111
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 5,
+        "predicted": 0.27977353930473325,
+        "observed": 0.2
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.5171289571693966,
+        "observed": 0.2857142857142857
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 22,
+        "predicted": 0.727951320734891,
+        "observed": 0.7272727272727273
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.8756616756319999,
+        "observed": 0.925
+      }
+    ],
+    "ece_5_bins": 0.04059864780442283
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 52,
+    "fold": 0,
+    "parameter": 0.25,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8181818181818182,
+    "recall": 0.9,
+    "specificity": 0.76,
+    "f1": 0.8571428571428571,
+    "roc_auc": 0.8996666666666666,
+    "average_precision": 0.9070054923138698,
+    "brier": 0.12816567939362125,
+    "log_loss": 0.4086053025395558,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9059488716446525,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 35,
+        "predicted": 0.05955972450652293,
+        "observed": 0.11428571428571428
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.2683227317673819,
+        "observed": 0.2857142857142857
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5345061719417572,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7059626196111951,
+        "observed": 0.6428571428571429
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.935875512983488,
+        "observed": 0.8913043478260869
+      }
+    ],
+    "ece_5_bins": 0.04769954697482967
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 52,
+    "fold": 0,
+    "parameter": 10.0,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8412698412698413,
+    "recall": 0.8833333333333333,
+    "specificity": 0.8,
+    "f1": 0.8617886178861789,
+    "roc_auc": 0.9078333333333334,
+    "average_precision": 0.916314942819646,
+    "brier": 0.12237305610099368,
+    "log_loss": 0.3889512904356498,
+    "confusion_matrix": [
+      [
+        40,
+        10
+      ],
+      [
+        7,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9155188870098337,
+    "sensitivity": 0.8833333333333333,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.10466471104602883,
+        "observed": 0.0967741935483871
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.2808833270607802,
+        "observed": 0.2727272727272727
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.5175833906789762,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.68425162821575,
+        "observed": 0.7368421052631579
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 39,
+        "predicted": 0.9035577720370824,
+        "observed": 0.9230769230769231
+      }
+    ],
+    "ece_5_bins": 0.02973293183036158
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 52,
+    "fold": 0,
+    "parameter": 1.0,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8181818181818182,
+    "recall": 0.9,
+    "specificity": 0.76,
+    "f1": 0.8571428571428571,
+    "roc_auc": 0.9073333333333332,
+    "average_precision": 0.9291679674656413,
+    "brier": 0.12047769209982723,
+    "log_loss": 0.38624719614828934,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9285628248808525,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 36,
+        "predicted": 0.10049587473627221,
+        "observed": 0.1111111111111111
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.30072569703144575,
+        "observed": 0.14285714285714285
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.5417937679050246,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7253421758139997,
+        "observed": 0.65
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.9018033476389717,
+        "observed": 0.925
+      }
+    ],
+    "ece_5_bins": 0.04663074203727522
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 52,
+    "fold": 0,
+    "parameter": 0.1,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8181818181818182,
+    "recall": 0.9,
+    "specificity": 0.76,
+    "f1": 0.8571428571428571,
+    "roc_auc": 0.9103333333333333,
+    "average_precision": 0.9234140367068854,
+    "brier": 0.1206977203790953,
+    "log_loss": 0.3830949700586903,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9226612751897948,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 32,
+        "predicted": 0.10119268411880167,
+        "observed": 0.09375
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.2748892110768125,
+        "observed": 0.2
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5170779136069152,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 22,
+        "predicted": 0.6997565566906936,
+        "observed": 0.6818181818181818
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9047808886194776,
+        "observed": 0.9473684210526315
+      }
+    ],
+    "ece_5_bins": 0.028515016282547368
+  },
+  {
+    "model": "BN",
+    "seed": 52,
+    "fold": 1,
+    "parameter": null,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.7936507936507936,
+    "recall": 0.819672131147541,
+    "specificity": 0.7346938775510204,
+    "f1": 0.8064516129032258,
+    "roc_auc": 0.8584810973569756,
+    "average_precision": 0.8513873247670473,
+    "brier": 0.15577056437235592,
+    "log_loss": 0.547077469401753,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8491401755059764,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.05368201405353567,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 12,
+        "predicted": 0.30053321060902294,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.5014396440207494,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 13,
+        "predicted": 0.6845831150038912,
+        "observed": 0.6153846153846154
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 47,
+        "predicted": 0.9604504209116601,
+        "observed": 0.851063829787234
+      }
+    ],
+    "ece_5_bins": 0.10141497333381738
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 52,
+    "fold": 1,
+    "parameter": 0.0001,
+    "accuracy": 0.7636363636363637,
+    "precision": 0.7692307692307693,
+    "recall": 0.819672131147541,
+    "specificity": 0.6938775510204082,
+    "f1": 0.7936507936507936,
+    "roc_auc": 0.8270324523251924,
+    "average_precision": 0.8293409463788008,
+    "brier": 0.16367167747527825,
+    "log_loss": 0.52469534451897,
+    "confusion_matrix": [
+      [
+        34,
+        15
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8270679924142809,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 32,
+        "predicted": 0.0831469407712575,
+        "observed": 0.0625
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.33811549469828606,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.48139325210026335,
+        "observed": 0.5714285714285714
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.7126576712256983,
+        "observed": 0.7368421052631579
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 44,
+        "predicted": 0.9286869832060554,
+        "observed": 0.7954545454545454
+      }
+    ],
+    "ece_5_bins": 0.09916142627427524
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 52,
+    "fold": 1,
+    "parameter": null,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.7681159420289855,
+    "recall": 0.8688524590163934,
+    "specificity": 0.673469387755102,
+    "f1": 0.8153846153846154,
+    "roc_auc": 0.8367346938775511,
+    "average_precision": 0.8351265243341747,
+    "brier": 0.15545206217758298,
+    "log_loss": 0.4826393147300966,
+    "confusion_matrix": [
+      [
+        33,
+        16
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8328435388919293,
+    "sensitivity": 0.8688524590163934,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.0963291830929189,
+        "observed": 0.034482758620689655
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 9,
+        "predicted": 0.2820914453930325,
+        "observed": 0.4444444444444444
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.5174815844405781,
+        "observed": 0.8181818181818182
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.7219359278678894,
+        "observed": 0.7058823529411765
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 44,
+        "predicted": 0.9064978523687883,
+        "observed": 0.7954545454545454
+      }
+    ],
+    "ece_5_bins": 0.10655674682083459
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 52,
+    "fold": 1,
+    "parameter": 0.5,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.7936507936507936,
+    "recall": 0.819672131147541,
+    "specificity": 0.7346938775510204,
+    "f1": 0.8064516129032258,
+    "roc_auc": 0.8497825359652058,
+    "average_precision": 0.844799347240815,
+    "brier": 0.1588575211188182,
+    "log_loss": 0.5179590840796519,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8425945903707163,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.09845008156403448,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.29087321609258654,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5220412090420723,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 16,
+        "predicted": 0.7119353711605072,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 43,
+        "predicted": 0.9457479729208835,
+        "observed": 0.813953488372093
+      }
+    ],
+    "ece_5_bins": 0.09490897959436882
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 52,
+    "fold": 1,
+    "parameter": 1.0,
+    "accuracy": 0.7909090909090909,
+    "precision": 0.796875,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7346938775510204,
+    "f1": 0.816,
+    "roc_auc": 0.8584810973569756,
+    "average_precision": 0.8513873247670473,
+    "brier": 0.14769572573206938,
+    "log_loss": 0.4672154219803545,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8491401755059764,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 23,
+        "predicted": 0.12553207533627164,
+        "observed": 0.0
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 14,
+        "predicted": 0.29476860783104614,
+        "observed": 0.2857142857142857
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 18,
+        "predicted": 0.49445210825051217,
+        "observed": 0.6111111111111112
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7002699173220241,
+        "observed": 0.7777777777777778
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 37,
+        "predicted": 0.9231197116658912,
+        "observed": 0.8648648648648649
+      }
+    ],
+    "ece_5_bins": 0.07876755557910196
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 52,
+    "fold": 1,
+    "parameter": 10.0,
+    "accuracy": 0.7545454545454545,
+    "precision": 0.765625,
+    "recall": 0.8032786885245902,
+    "specificity": 0.6938775510204082,
+    "f1": 0.784,
+    "roc_auc": 0.8260287721646036,
+    "average_precision": 0.8283401552766185,
+    "brier": 0.17076998907443322,
+    "log_loss": 0.5476295268624612,
+    "confusion_matrix": [
+      [
+        34,
+        15
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8260514552508772,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.055681024121868754,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.31665592451328495,
+        "observed": 0.7272727272727273
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.5350495702512671,
+        "observed": 0.42857142857142855
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 15,
+        "predicted": 0.7148304247943347,
+        "observed": 0.8
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 44,
+        "predicted": 0.9323769541909364,
+        "observed": 0.7954545454545454
+      }
+    ],
+    "ece_5_bins": 0.12478897853252045
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 52,
+    "fold": 1,
+    "parameter": 0.1,
+    "accuracy": 0.8,
+    "precision": 0.8,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7346938775510204,
+    "f1": 0.8253968253968254,
+    "roc_auc": 0.8541318166610907,
+    "average_precision": 0.8509372411387728,
+    "brier": 0.14854308003542363,
+    "log_loss": 0.46923239408973527,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8488453064629691,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 28,
+        "predicted": 0.11285973650759105,
+        "observed": 0.03571428571428571
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.31811476855585535,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 16,
+        "predicted": 0.5002513854179966,
+        "observed": 0.5625
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7007341299815575,
+        "observed": 0.7777777777777778
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9274937019580581,
+        "observed": 0.8421052631578947
+      }
+    ],
+    "ece_5_bins": 0.08733135549731115
+  },
+  {
+    "model": "BN",
+    "seed": 52,
+    "fold": 2,
+    "parameter": null,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8360655737704918,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7959183673469388,
+    "f1": 0.8360655737704918,
+    "roc_auc": 0.8922716627634659,
+    "average_precision": 0.9009454114161037,
+    "brier": 0.13979645817713712,
+    "log_loss": 0.45877006177914675,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8997120330721605,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 42,
+        "predicted": 0.0521986547291178,
+        "observed": 0.16666666666666666
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 5,
+        "predicted": 0.3074802567755551,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 4,
+        "predicted": 0.5126089698060157,
+        "observed": 0.25
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7082474191307938,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 49,
+        "predicted": 0.9420705470159381,
+        "observed": 0.8979591836734694
+      }
+    ],
+    "ece_5_bins": 0.09604201901647492
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 52,
+    "fold": 2,
+    "parameter": 0.0001,
+    "accuracy": 0.8272727272727273,
+    "precision": 0.8181818181818182,
+    "recall": 0.8852459016393442,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8503937007874016,
+    "roc_auc": 0.8895951823352292,
+    "average_precision": 0.8855888708772746,
+    "brier": 0.12794906010990545,
+    "log_loss": 0.41291241999102385,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        7,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8835086107997885,
+    "sensitivity": 0.8852459016393442,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.08983022741535131,
+        "observed": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.3180459759065083,
+        "observed": 0.2857142857142857
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.5223971225998618,
+        "observed": 0.45454545454545453
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.7044358428786782,
+        "observed": 0.7647058823529411
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 41,
+        "predicted": 0.8940284368468494,
+        "observed": 0.9024390243902439
+      }
+    ],
+    "ece_5_bins": 0.02988988371057944
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 52,
+    "fold": 2,
+    "parameter": null,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8153846153846154,
+    "recall": 0.8688524590163934,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8412698412698413,
+    "roc_auc": 0.8902643024422884,
+    "average_precision": 0.8945486407829872,
+    "brier": 0.12998695514862937,
+    "log_loss": 0.4169058519129116,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8928694304753507,
+    "sensitivity": 0.8688524590163934,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.11299574310923445,
+        "observed": 0.10344827586206896
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.27160794803729427,
+        "observed": 0.3076923076923077
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5091092884540558,
+        "observed": 0.625
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.7110831298326191,
+        "observed": 0.631578947368421
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 41,
+        "predicted": 0.867319032913301,
+        "observed": 0.9024390243902439
+      }
+    ],
+    "ece_5_bins": 0.042032709412954096
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 52,
+    "fold": 2,
+    "parameter": 1.0,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8253968253968254,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7755102040816326,
+    "f1": 0.8387096774193549,
+    "roc_auc": 0.8882569421211108,
+    "average_precision": 0.8978056191462446,
+    "brier": 0.13257605078843862,
+    "log_loss": 0.4177510842793735,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8966366297192971,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 35,
+        "predicted": 0.06834934504835734,
+        "observed": 0.11428571428571428
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 9,
+        "predicted": 0.27772607571548885,
+        "observed": 0.4444444444444444
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5352891683578491,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 16,
+        "predicted": 0.6956121027469635,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 42,
+        "predicted": 0.9088887189115796,
+        "observed": 0.8809523809523809
+      }
+    ],
+    "ece_5_bins": 0.04940076490059832
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 52,
+    "fold": 2,
+    "parameter": 1.0,
+    "accuracy": 0.8,
+    "precision": 0.8095238095238095,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8225806451612904,
+    "roc_auc": 0.8922716627634659,
+    "average_precision": 0.9009454114161037,
+    "brier": 0.1304099371857126,
+    "log_loss": 0.4120971059729891,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8997120330721605,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 26,
+        "predicted": 0.10704799575464309,
+        "observed": 0.07692307692307693
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 16,
+        "predicted": 0.27551319440335376,
+        "observed": 0.3125
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.49416235283144916,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 23,
+        "predicted": 0.7186774083677048,
+        "observed": 0.782608695652174
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 35,
+        "predicted": 0.8940445492153186,
+        "observed": 0.9142857142857143
+      }
+    ],
+    "ece_5_bins": 0.040868369931710814
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 52,
+    "fold": 2,
+    "parameter": 10.0,
+    "accuracy": 0.8272727272727273,
+    "precision": 0.8181818181818182,
+    "recall": 0.8852459016393442,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8503937007874016,
+    "roc_auc": 0.8895951823352292,
+    "average_precision": 0.8855888708772746,
+    "brier": 0.1292825336113501,
+    "log_loss": 0.4164075765333389,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        7,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8835086107997885,
+    "sensitivity": 0.8852459016393442,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 27,
+        "predicted": 0.10380804082052436,
+        "observed": 0.07407407407407407
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 12,
+        "predicted": 0.26793219514883543,
+        "observed": 0.25
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 14,
+        "predicted": 0.519119021226169,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 22,
+        "predicted": 0.7147383184539309,
+        "observed": 0.7727272727272727
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 35,
+        "predicted": 0.8788007421384937,
+        "observed": 0.9142857142857143
+      }
+    ],
+    "ece_5_bins": 0.03457637054793446
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 52,
+    "fold": 2,
+    "parameter": 0.1,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8125,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7551020408163265,
+    "f1": 0.832,
+    "roc_auc": 0.8946135831381733,
+    "average_precision": 0.8982234205714568,
+    "brier": 0.1276250039490303,
+    "log_loss": 0.40727918794592616,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.896838877213985,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 27,
+        "predicted": 0.10431747983438042,
+        "observed": 0.07407407407407407
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 15,
+        "predicted": 0.28490791709372193,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.5091168398204997,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7087529931201255,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.8830119034531018,
+        "observed": 0.9210526315789473
+      }
+    ],
+    "ece_5_bins": 0.04458735821551873
+  },
+  {
+    "model": "BN",
+    "seed": 52,
+    "fold": 3,
+    "parameter": null,
+    "accuracy": 0.8,
+    "precision": 0.8421052631578947,
+    "recall": 0.7868852459016393,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8135593220338984,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.9002329560366099,
+    "brier": 0.13596763679362825,
+    "log_loss": 0.45902086488940763,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732184,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.05632102062696884,
+        "observed": 0.08823529411764706
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.3119317796407603,
+        "observed": 0.46153846153846156
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.4942618203945758,
+        "observed": 0.6363636363636364
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 7,
+        "predicted": 0.7239966840681019,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9636877497230096,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.07297288786386356
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 52,
+    "fold": 3,
+    "parameter": 0.01,
+    "accuracy": 0.8,
+    "precision": 0.7910447761194029,
+    "recall": 0.8688524590163934,
+    "specificity": 0.7142857142857143,
+    "f1": 0.828125,
+    "roc_auc": 0.8895951823352292,
+    "average_precision": 0.8978778164947665,
+    "brier": 0.12774629981859317,
+    "log_loss": 0.41695487383120833,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8965791074077781,
+    "sensitivity": 0.8688524590163934,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 19,
+        "predicted": 0.14939979503029271,
+        "observed": 0.05263157894736842
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 18,
+        "predicted": 0.2781026115020116,
+        "observed": 0.1111111111111111
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 19,
+        "predicted": 0.5152452023405778,
+        "observed": 0.5263157894736842
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 11,
+        "predicted": 0.7041465802626177,
+        "observed": 0.8181818181818182
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 43,
+        "predicted": 0.9261316573897074,
+        "observed": 0.9069767441860465
+      }
+    ],
+    "ece_5_bins": 0.06484393775463107
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 52,
+    "fold": 3,
+    "parameter": null,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8412698412698413,
+    "recall": 0.8688524590163934,
+    "specificity": 0.7959183673469388,
+    "f1": 0.8548387096774194,
+    "roc_auc": 0.899966543994647,
+    "average_precision": 0.906724027595627,
+    "brier": 0.12006372345746692,
+    "log_loss": 0.3954740395752878,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9054454777297424,
+    "sensitivity": 0.8688524590163934,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 28,
+        "predicted": 0.11948771428849016,
+        "observed": 0.07142857142857142
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 12,
+        "predicted": 0.31858765458067256,
+        "observed": 0.16666666666666666
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 14,
+        "predicted": 0.5031489027397973,
+        "observed": 0.5714285714285714
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 15,
+        "predicted": 0.6984487255414327,
+        "observed": 0.8
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 41,
+        "predicted": 0.8967253827467198,
+        "observed": 0.9024390243902439
+      }
+    ],
+    "ece_5_bins": 0.05347410582683304
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 52,
+    "fold": 3,
+    "parameter": 0.25,
+    "accuracy": 0.8,
+    "precision": 0.8421052631578947,
+    "recall": 0.7868852459016393,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8135593220338984,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.90023295603661,
+    "brier": 0.13595523583845132,
+    "log_loss": 0.4589968885923165,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732185,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.05639605391222764,
+        "observed": 0.08823529411764706
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.3121083825826645,
+        "observed": 0.46153846153846156
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.49450215155428107,
+        "observed": 0.6363636363636364
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 7,
+        "predicted": 0.7241147841726031,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9637031806839838,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.0729186195118184
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 52,
+    "fold": 3,
+    "parameter": 10.0,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8448275862068966,
+    "recall": 0.8032786885245902,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8235294117647058,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.9002329560366099,
+    "brier": 0.1333913534788567,
+    "log_loss": 0.42415662716810065,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732184,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 20,
+        "predicted": 0.12160047534885436,
+        "observed": 0.1
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.29089644031729706,
+        "observed": 0.10526315789473684
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.499601620977871,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.7182044673031958,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9133404800840028,
+        "observed": 0.8947368421052632
+      }
+    ],
+    "ece_5_bins": 0.07778084061840179
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 52,
+    "fold": 3,
+    "parameter": 1.0,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8225806451612904,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7755102040816326,
+    "f1": 0.8292682926829268,
+    "roc_auc": 0.8892606222816996,
+    "average_precision": 0.8975934656800395,
+    "brier": 0.1283409640482349,
+    "log_loss": 0.4169642009159296,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.896292283977271,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 19,
+        "predicted": 0.15316680598585813,
+        "observed": 0.05263157894736842
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 20,
+        "predicted": 0.2839353469679856,
+        "observed": 0.15
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 18,
+        "predicted": 0.502313992484076,
+        "observed": 0.5555555555555556
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 11,
+        "predicted": 0.685839589231286,
+        "observed": 0.8181818181818182
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 42,
+        "predicted": 0.9048036118609952,
+        "observed": 0.9047619047619048
+      }
+    ],
+    "ece_5_bins": 0.06367946004541185
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 52,
+    "fold": 3,
+    "parameter": 10.0,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8448275862068966,
+    "recall": 0.8032786885245902,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8235294117647058,
+    "roc_auc": 0.8916025426564068,
+    "average_precision": 0.9004393070626331,
+    "brier": 0.13353525689962217,
+    "log_loss": 0.42445015055623364,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8991196142683233,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 20,
+        "predicted": 0.1215304830049303,
+        "observed": 0.1
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.29126212122788697,
+        "observed": 0.10526315789473684
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.4995922589827449,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.7179448989307359,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9131594777996881,
+        "observed": 0.8947368421052632
+      }
+    ],
+    "ece_5_bins": 0.0777988535819103
+  },
+  {
+    "model": "BN",
+    "seed": 52,
+    "fold": 4,
+    "parameter": null,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.8245614035087719,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7959183673469388,
+    "f1": 0.7966101694915254,
+    "roc_auc": 0.8261960521913684,
+    "average_precision": 0.8525100453508362,
+    "brier": 0.18552518191344294,
+    "log_loss": 0.6419755943857772,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8507323294749798,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 39,
+        "predicted": 0.0511990296777478,
+        "observed": 0.23076923076923078
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.2946238333216282,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.45771555368183614,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7257775462834155,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.9558236135547082,
+        "observed": 0.8478260869565217
+      }
+    ],
+    "ece_5_bins": 0.12337489967374063
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 52,
+    "fold": 4,
+    "parameter": 0.001,
+    "accuracy": 0.7454545454545455,
+    "precision": 0.7704918032786885,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7142857142857143,
+    "f1": 0.7704918032786885,
+    "roc_auc": 0.8236868517898963,
+    "average_precision": 0.831232346248884,
+    "brier": 0.17100476270543236,
+    "log_loss": 0.537812687540639,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8285623711060002,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 32,
+        "predicted": 0.08527985148248263,
+        "observed": 0.15625
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.30682051984163433,
+        "observed": 0.6153846153846154
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.502548789436167,
+        "observed": 0.36363636363636365
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7269217073917389,
+        "observed": 0.6428571428571429
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.9065328866243363,
+        "observed": 0.875
+      }
+    ],
+    "ece_5_bins": 0.09316940042613583
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 52,
+    "fold": 4,
+    "parameter": null,
+    "accuracy": 0.7545454545454545,
+    "precision": 0.7741935483870968,
+    "recall": 0.7868852459016393,
+    "specificity": 0.7142857142857143,
+    "f1": 0.7804878048780488,
+    "roc_auc": 0.8193375710940114,
+    "average_precision": 0.834532975444122,
+    "brier": 0.17644214052694815,
+    "log_loss": 0.5420112912880294,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8322673310744542,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.09452621969244172,
+        "observed": 0.12903225806451613
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 14,
+        "predicted": 0.2942569947668484,
+        "observed": 0.5714285714285714
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.5163725137710571,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7159670710563659,
+        "observed": 0.8
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.8974654886457655,
+        "observed": 0.8222222222222222
+      }
+    ],
+    "ece_5_bins": 0.09400082435458898
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 52,
+    "fold": 4,
+    "parameter": 0.5,
+    "accuracy": 0.7727272727272727,
+    "precision": 0.8103448275862069,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7755102040816326,
+    "f1": 0.7899159663865546,
+    "roc_auc": 0.8280361324857812,
+    "average_precision": 0.8572892409850801,
+    "brier": 0.18216013308114845,
+    "log_loss": 0.6091666722804484,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8554476511376005,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 37,
+        "predicted": 0.05769566471084348,
+        "observed": 0.24324324324324326
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.29313460290431975,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.4847521483898163,
+        "observed": 0.25
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 9,
+        "predicted": 0.7325323621431986,
+        "observed": 0.7777777777777778
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.9491860879504163,
+        "observed": 0.8478260869565217
+      }
+    ],
+    "ece_5_bins": 0.13528818500185896
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 52,
+    "fold": 4,
+    "parameter": 10.0,
+    "accuracy": 0.7727272727272727,
+    "precision": 0.8103448275862069,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7755102040816326,
+    "f1": 0.7899159663865546,
+    "roc_auc": 0.8261960521913684,
+    "average_precision": 0.8525100453508362,
+    "brier": 0.16804592622790332,
+    "log_loss": 0.5098351761614708,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8507323294749798,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 25,
+        "predicted": 0.11836139632433419,
+        "observed": 0.16
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.2906027736479216,
+        "observed": 0.42105263157894735
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.48062863676380374,
+        "observed": 0.3
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7062047816079643,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 36,
+        "predicted": 0.9138769933062749,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.05772241955822144
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 52,
+    "fold": 4,
+    "parameter": 10.0,
+    "accuracy": 0.7545454545454545,
+    "precision": 0.7833333333333333,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7346938775510204,
+    "f1": 0.7768595041322314,
+    "roc_auc": 0.8236868517898963,
+    "average_precision": 0.831232346248884,
+    "brier": 0.16958240579123457,
+    "log_loss": 0.5277489625725823,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8285623711060002,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.09510720930552961,
+        "observed": 0.12903225806451613
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 14,
+        "predicted": 0.307497176203252,
+        "observed": 0.6428571428571429
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 13,
+        "predicted": 0.5104389900036934,
+        "observed": 0.38461538461538464
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.7422908556866038,
+        "observed": 0.7647058823529411
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 35,
+        "predicted": 0.9018927999588614,
+        "observed": 0.8571428571428571
+      }
+    ],
+    "ece_5_bins": 0.0848156942419905
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 52,
+    "fold": 4,
+    "parameter": 1.0,
+    "accuracy": 0.7909090909090909,
+    "precision": 0.8275862068965517,
+    "recall": 0.7868852459016393,
+    "specificity": 0.7959183673469388,
+    "f1": 0.8067226890756303,
+    "roc_auc": 0.8360655737704918,
+    "average_precision": 0.8594467852624048,
+    "brier": 0.16667282347793014,
+    "log_loss": 0.5115336885620048,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8575838767853983,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.10412209152129863,
+        "observed": 0.13793103448275862
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 15,
+        "predicted": 0.28679931082958243,
+        "observed": 0.4666666666666667
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 12,
+        "predicted": 0.4841193046906221,
+        "observed": 0.4166666666666667
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7380149524168192,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 34,
+        "predicted": 0.9199625731618811,
+        "observed": 0.8823529411764706
+      }
+    ],
+    "ece_5_bins": 0.05460299798994221
+  },
+  {
+    "model": "BN",
+    "seed": 62,
+    "fold": 0,
+    "parameter": null,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8412698412698413,
+    "recall": 0.8833333333333333,
+    "specificity": 0.8,
+    "f1": 0.8617886178861789,
+    "roc_auc": 0.9078333333333334,
+    "average_precision": 0.916314942819646,
+    "brier": 0.12635631465567543,
+    "log_loss": 0.42156817329331203,
+    "confusion_matrix": [
+      [
+        40,
+        10
+      ],
+      [
+        7,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9155188870098337,
+    "sensitivity": 0.8833333333333333,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 39,
+        "predicted": 0.03500448767009454,
+        "observed": 0.1282051282051282
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.2882740153876866,
+        "observed": 0.14285714285714285
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 6,
+        "predicted": 0.5435841845337717,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7006202631766528,
+        "observed": 0.7857142857142857
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 44,
+        "predicted": 0.9532976664467033,
+        "observed": 0.8863636363636364
+      }
+    ],
+    "ece_5_bins": 0.08661501473235723
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 62,
+    "fold": 0,
+    "parameter": 0.001,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8208955223880597,
+    "recall": 0.9166666666666666,
+    "specificity": 0.76,
+    "f1": 0.8661417322834646,
+    "roc_auc": 0.9176666666666666,
+    "average_precision": 0.9310362001001923,
+    "brier": 0.11633610534522185,
+    "log_loss": 0.37585824642067395,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        5,
+        55
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9303805608835835,
+    "sensitivity": 0.9166666666666666,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 37,
+        "predicted": 0.09065715893096216,
+        "observed": 0.10810810810810811
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 3,
+        "predicted": 0.2854785869518916,
+        "observed": 0.0
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 6,
+        "predicted": 0.5207278182109197,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7115039394961463,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.8748898791230243,
+        "observed": 0.9130434782608695
+      }
+    ],
+    "ece_5_bins": 0.047169311463155526
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 62,
+    "fold": 0,
+    "parameter": null,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8208955223880597,
+    "recall": 0.9166666666666666,
+    "specificity": 0.76,
+    "f1": 0.8661417322834646,
+    "roc_auc": 0.9113333333333333,
+    "average_precision": 0.928847017739676,
+    "brier": 0.12106853735993081,
+    "log_loss": 0.38762250239629736,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        5,
+        55
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9282150066889344,
+    "sensitivity": 0.9166666666666666,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.09689577438813798,
+        "observed": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.2781874369829893,
+        "observed": 0.125
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.5490718424320221,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7370887200037638,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.8787175549401177,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.03555446311154147
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 62,
+    "fold": 0,
+    "parameter": 0.5,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8307692307692308,
+    "recall": 0.9,
+    "specificity": 0.78,
+    "f1": 0.864,
+    "roc_auc": 0.906,
+    "average_precision": 0.9144904903411387,
+    "brier": 0.12612985482063763,
+    "log_loss": 0.4151339643871907,
+    "confusion_matrix": [
+      [
+        39,
+        11
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9135417222988594,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 38,
+        "predicted": 0.051335564011854955,
+        "observed": 0.13157894736842105
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 5,
+        "predicted": 0.3346899628639221,
+        "observed": 0.2
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.4968864738941193,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 13,
+        "predicted": 0.6833454966545105,
+        "observed": 0.6923076923076923
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 49,
+        "predicted": 0.9473341958863395,
+        "observed": 0.8775510204081632
+      }
+    ],
+    "ece_5_bins": 0.07039104448419743
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 62,
+    "fold": 0,
+    "parameter": 10.0,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8412698412698413,
+    "recall": 0.8833333333333333,
+    "specificity": 0.8,
+    "f1": 0.8617886178861789,
+    "roc_auc": 0.9078333333333334,
+    "average_precision": 0.916314942819646,
+    "brier": 0.12237305610099368,
+    "log_loss": 0.3889512904356498,
+    "confusion_matrix": [
+      [
+        40,
+        10
+      ],
+      [
+        7,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9155188870098337,
+    "sensitivity": 0.8833333333333333,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 31,
+        "predicted": 0.10466471104602883,
+        "observed": 0.0967741935483871
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.2808833270607802,
+        "observed": 0.2727272727272727
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.5175833906789762,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 19,
+        "predicted": 0.68425162821575,
+        "observed": 0.7368421052631579
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 39,
+        "predicted": 0.9035577720370824,
+        "observed": 0.9230769230769231
+      }
+    ],
+    "ece_5_bins": 0.02973293183036158
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 62,
+    "fold": 0,
+    "parameter": 0.1,
+    "accuracy": 0.8454545454545455,
+    "precision": 0.8208955223880597,
+    "recall": 0.9166666666666666,
+    "specificity": 0.76,
+    "f1": 0.8661417322834646,
+    "roc_auc": 0.9176666666666666,
+    "average_precision": 0.9310362001001923,
+    "brier": 0.11623386179624841,
+    "log_loss": 0.3757048038816926,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        5,
+        55
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9303805608835835,
+    "sensitivity": 0.9166666666666666,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 37,
+        "predicted": 0.08878712463427196,
+        "observed": 0.10810810810810811
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 3,
+        "predicted": 0.28191625447812935,
+        "observed": 0.0
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 6,
+        "predicted": 0.5173438283969506,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7094213617811391,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.8742489032001803,
+        "observed": 0.9130434782608695
+      }
+    ],
+    "ece_5_bins": 0.04744384624727488
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 62,
+    "fold": 0,
+    "parameter": 0.1,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8181818181818182,
+    "recall": 0.9,
+    "specificity": 0.76,
+    "f1": 0.8571428571428571,
+    "roc_auc": 0.9146666666666666,
+    "average_precision": 0.9266805537283153,
+    "brier": 0.1183320456285164,
+    "log_loss": 0.376188677632379,
+    "confusion_matrix": [
+      [
+        38,
+        12
+      ],
+      [
+        6,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9259568054410018,
+    "sensitivity": 0.9,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.09479013003417007,
+        "observed": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 7,
+        "predicted": 0.2664630529471563,
+        "observed": 0.14285714285714285
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.5035760008724649,
+        "observed": 0.42857142857142855
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 25,
+        "predicted": 0.7157670450187432,
+        "observed": 0.68
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 37,
+        "predicted": 0.9055322011400109,
+        "observed": 0.9459459459459459
+      }
+    ],
+    "ece_5_bins": 0.041426305807852205
+  },
+  {
+    "model": "BN",
+    "seed": 62,
+    "fold": 1,
+    "parameter": null,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.7936507936507936,
+    "recall": 0.819672131147541,
+    "specificity": 0.7346938775510204,
+    "f1": 0.8064516129032258,
+    "roc_auc": 0.8584810973569756,
+    "average_precision": 0.8513873247670473,
+    "brier": 0.15577056437235592,
+    "log_loss": 0.547077469401753,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8491401755059764,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.05368201405353567,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 12,
+        "predicted": 0.30053321060902294,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.5014396440207494,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 13,
+        "predicted": 0.6845831150038912,
+        "observed": 0.6153846153846154
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 47,
+        "predicted": 0.9604504209116601,
+        "observed": 0.851063829787234
+      }
+    ],
+    "ece_5_bins": 0.10141497333381738
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 62,
+    "fold": 1,
+    "parameter": 0.001,
+    "accuracy": 0.7636363636363637,
+    "precision": 0.7611940298507462,
+    "recall": 0.8360655737704918,
+    "specificity": 0.673469387755102,
+    "f1": 0.796875,
+    "roc_auc": 0.8343927735028437,
+    "average_precision": 0.841003473306088,
+    "brier": 0.1575848443609407,
+    "log_loss": 0.4930729426868209,
+    "confusion_matrix": [
+      [
+        33,
+        16
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8389176523321307,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.0744764114216227,
+        "observed": 0.034482758620689655
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 9,
+        "predicted": 0.3216375410556793,
+        "observed": 0.4444444444444444
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5012196935713291,
+        "observed": 0.875
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.6935459936366362,
+        "observed": 0.6470588235294118
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 47,
+        "predicted": 0.9127084245073035,
+        "observed": 0.8085106382978723
+      }
+    ],
+    "ece_5_bins": 0.09948089415292176
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 62,
+    "fold": 1,
+    "parameter": null,
+    "accuracy": 0.7727272727272727,
+    "precision": 0.7647058823529411,
+    "recall": 0.8524590163934426,
+    "specificity": 0.673469387755102,
+    "f1": 0.8062015503875969,
+    "roc_auc": 0.8347273335563734,
+    "average_precision": 0.8375359293660423,
+    "brier": 0.1550107063687913,
+    "log_loss": 0.4847448511087861,
+    "confusion_matrix": [
+      [
+        33,
+        16
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8353601435692178,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.08968149844942422,
+        "observed": 0.034482758620689655
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 6,
+        "predicted": 0.26077554126580554,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 13,
+        "predicted": 0.4960519763139578,
+        "observed": 0.6923076923076923
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.6962682817663465,
+        "observed": 0.6428571428571429
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 48,
+        "predicted": 0.9065927304327488,
+        "observed": 0.8125
+      }
+    ],
+    "ece_5_bins": 0.09865128655325281
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 62,
+    "fold": 1,
+    "parameter": 0.25,
+    "accuracy": 0.8,
+    "precision": 0.8,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7346938775510204,
+    "f1": 0.8253968253968254,
+    "roc_auc": 0.8457678153228504,
+    "average_precision": 0.8414525973525044,
+    "brier": 0.1604026421031235,
+    "log_loss": 0.5319882507900133,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8391509441994291,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.09839323902612224,
+        "observed": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 9,
+        "predicted": 0.3020559317535824,
+        "observed": 0.4444444444444444
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 7,
+        "predicted": 0.5227194045271192,
+        "observed": 0.8571428571428571
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 15,
+        "predicted": 0.709149940808614,
+        "observed": 0.7333333333333333
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9482365555233425,
+        "observed": 0.8
+      }
+    ],
+    "ece_5_bins": 0.10282260492782698
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 62,
+    "fold": 1,
+    "parameter": 1.0,
+    "accuracy": 0.7909090909090909,
+    "precision": 0.796875,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7346938775510204,
+    "f1": 0.816,
+    "roc_auc": 0.8584810973569756,
+    "average_precision": 0.8513873247670473,
+    "brier": 0.14769572573206938,
+    "log_loss": 0.4672154219803545,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8491401755059764,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 23,
+        "predicted": 0.12553207533627164,
+        "observed": 0.0
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 14,
+        "predicted": 0.29476860783104614,
+        "observed": 0.2857142857142857
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 18,
+        "predicted": 0.49445210825051217,
+        "observed": 0.6111111111111112
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 18,
+        "predicted": 0.7002699173220241,
+        "observed": 0.7777777777777778
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 37,
+        "predicted": 0.9231197116658912,
+        "observed": 0.8648648648648649
+      }
+    ],
+    "ece_5_bins": 0.07876755557910196
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 62,
+    "fold": 1,
+    "parameter": 10.0,
+    "accuracy": 0.7636363636363637,
+    "precision": 0.7611940298507462,
+    "recall": 0.8360655737704918,
+    "specificity": 0.673469387755102,
+    "f1": 0.796875,
+    "roc_auc": 0.8343927735028437,
+    "average_precision": 0.841003473306088,
+    "brier": 0.1582789557835112,
+    "log_loss": 0.4940099593599921,
+    "confusion_matrix": [
+      [
+        33,
+        16
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8389176523321307,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.06853069325862593,
+        "observed": 0.034482758620689655
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 9,
+        "predicted": 0.308162673051158,
+        "observed": 0.4444444444444444
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 9,
+        "predicted": 0.5012063122731222,
+        "observed": 0.8888888888888888
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 16,
+        "predicted": 0.6916443926555964,
+        "observed": 0.625
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 47,
+        "predicted": 0.911919923351443,
+        "observed": 0.8085106382978723
+      }
+    ],
+    "ece_5_bins": 0.10572378105989996
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 62,
+    "fold": 1,
+    "parameter": 0.1,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.7761194029850746,
+    "recall": 0.8524590163934426,
+    "specificity": 0.6938775510204082,
+    "f1": 0.8125,
+    "roc_auc": 0.8514553362328537,
+    "average_precision": 0.8481908700560657,
+    "brier": 0.14724085423227745,
+    "log_loss": 0.46412841761038104,
+    "confusion_matrix": [
+      [
+        34,
+        15
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8459588985879599,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.1134416599041871,
+        "observed": 0.034482758620689655
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 6,
+        "predicted": 0.2902978453515225,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 18,
+        "predicted": 0.5048126112097044,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7106066414645977,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 37,
+        "predicted": 0.9275451412209763,
+        "observed": 0.8378378378378378
+      }
+    ],
+    "ece_5_bins": 0.0869857405383798
+  },
+  {
+    "model": "BN",
+    "seed": 62,
+    "fold": 2,
+    "parameter": null,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8360655737704918,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7959183673469388,
+    "f1": 0.8360655737704918,
+    "roc_auc": 0.8922716627634659,
+    "average_precision": 0.9009454114161037,
+    "brier": 0.13979645817713712,
+    "log_loss": 0.45877006177914675,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8997120330721605,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 42,
+        "predicted": 0.0521986547291178,
+        "observed": 0.16666666666666666
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 5,
+        "predicted": 0.3074802567755551,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 4,
+        "predicted": 0.5126089698060157,
+        "observed": 0.25
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7082474191307938,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 49,
+        "predicted": 0.9420705470159381,
+        "observed": 0.8979591836734694
+      }
+    ],
+    "ece_5_bins": 0.09604201901647492
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 62,
+    "fold": 2,
+    "parameter": 0.0001,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8225806451612904,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7755102040816326,
+    "f1": 0.8292682926829268,
+    "roc_auc": 0.8839076614252258,
+    "average_precision": 0.8811812058681107,
+    "brier": 0.13270059050824787,
+    "log_loss": 0.42051530825740413,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8790484617812924,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.07836172007250064,
+        "observed": 0.12121212121212122
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.2747721131891012,
+        "observed": 0.125
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 13,
+        "predicted": 0.5128712952136993,
+        "observed": 0.7692307692307693
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 15,
+        "predicted": 0.701881225903829,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 41,
+        "predicted": 0.8817226886749268,
+        "observed": 0.9024390243902439
+      }
+    ],
+    "ece_5_bins": 0.07565910416570579
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 62,
+    "fold": 2,
+    "parameter": null,
+    "accuracy": 0.8,
+    "precision": 0.819672131147541,
+    "recall": 0.819672131147541,
+    "specificity": 0.7755102040816326,
+    "f1": 0.819672131147541,
+    "roc_auc": 0.8792238206758113,
+    "average_precision": 0.8783235894385027,
+    "brier": 0.1389348312944829,
+    "log_loss": 0.43691060586228125,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8763419295216173,
+    "sensitivity": 0.819672131147541,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 35,
+        "predicted": 0.0688506062275597,
+        "observed": 0.11428571428571428
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.2771988455206156,
+        "observed": 0.625
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.4876782953739166,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 17,
+        "predicted": 0.7419075089342454,
+        "observed": 0.7058823529411765
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.884085190296173,
+        "observed": 0.9
+      }
+    ],
+    "ece_5_bins": 0.059076736469499104
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 62,
+    "fold": 2,
+    "parameter": 0.25,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.803030303030303,
+    "recall": 0.8688524590163934,
+    "specificity": 0.7346938775510204,
+    "f1": 0.8346456692913385,
+    "roc_auc": 0.8926062228169956,
+    "average_precision": 0.9023475513211002,
+    "brier": 0.13302501535835595,
+    "log_loss": 0.4236919171387291,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9011888349928254,
+    "sensitivity": 0.8688524590163934,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 35,
+        "predicted": 0.06890545967700226,
+        "observed": 0.11428571428571428
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 8,
+        "predicted": 0.28345067612826824,
+        "observed": 0.375
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.5444237031042576,
+        "observed": 0.625
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.7113543748855591,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 47,
+        "predicted": 0.9264428514115354,
+        "observed": 0.8936170212765957
+      }
+    ],
+    "ece_5_bins": 0.054948912658305336
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 62,
+    "fold": 2,
+    "parameter": 1.0,
+    "accuracy": 0.8,
+    "precision": 0.8095238095238095,
+    "recall": 0.8360655737704918,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8225806451612904,
+    "roc_auc": 0.8922716627634659,
+    "average_precision": 0.9009454114161037,
+    "brier": 0.1304099371857126,
+    "log_loss": 0.4120971059729891,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8997120330721605,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 26,
+        "predicted": 0.10704799575464309,
+        "observed": 0.07692307692307693
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 16,
+        "predicted": 0.27551319440335376,
+        "observed": 0.3125
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.49416235283144916,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 23,
+        "predicted": 0.7186774083677048,
+        "observed": 0.782608695652174
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 35,
+        "predicted": 0.8940445492153186,
+        "observed": 0.9142857142857143
+      }
+    ],
+    "ece_5_bins": 0.040868369931710814
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 62,
+    "fold": 2,
+    "parameter": 10.0,
+    "accuracy": 0.8181818181818182,
+    "precision": 0.8059701492537313,
+    "recall": 0.8852459016393442,
+    "specificity": 0.7346938775510204,
+    "f1": 0.84375,
+    "roc_auc": 0.884576781532285,
+    "average_precision": 0.8817797888113874,
+    "brier": 0.1325627958363082,
+    "log_loss": 0.4214046110810471,
+    "confusion_matrix": [
+      [
+        36,
+        13
+      ],
+      [
+        7,
+        54
+      ]
+    ],
+    "pr_auc_trapezoid": 0.879652990240235,
+    "sensitivity": 0.8852459016393442,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 30,
+        "predicted": 0.10303076815007975,
+        "observed": 0.1
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.2828894580334142,
+        "observed": 0.2
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 13,
+        "predicted": 0.5164828664030339,
+        "observed": 0.6923076923076923
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 21,
+        "predicted": 0.7135247444427761,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 36,
+        "predicted": 0.8682369261889473,
+        "observed": 0.9166666666666666
+      }
+    ],
+    "ece_5_bins": 0.05393664229175717
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 62,
+    "fold": 2,
+    "parameter": 0.1,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8125,
+    "recall": 0.8524590163934426,
+    "specificity": 0.7551020408163265,
+    "f1": 0.832,
+    "roc_auc": 0.8946135831381733,
+    "average_precision": 0.9026778022124349,
+    "brier": 0.12918195204989505,
+    "log_loss": 0.40973772072434156,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.9014734276188636,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.10600049550629977,
+        "observed": 0.06896551724137931
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 12,
+        "predicted": 0.286222652668309,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.49277452001366073,
+        "observed": 0.5454545454545454
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 22,
+        "predicted": 0.7171084824888193,
+        "observed": 0.7272727272727273
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 36,
+        "predicted": 0.8850442668742208,
+        "observed": 0.9166666666666666
+      }
+    ],
+    "ece_5_bins": 0.032553114502606756
+  },
+  {
+    "model": "BN",
+    "seed": 62,
+    "fold": 3,
+    "parameter": null,
+    "accuracy": 0.8,
+    "precision": 0.8421052631578947,
+    "recall": 0.7868852459016393,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8135593220338984,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.9002329560366099,
+    "brier": 0.13596763679362825,
+    "log_loss": 0.45902086488940763,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732184,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.05632102062696884,
+        "observed": 0.08823529411764706
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.3119317796407603,
+        "observed": 0.46153846153846156
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.4942618203945758,
+        "observed": 0.6363636363636364
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 7,
+        "predicted": 0.7239966840681019,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9636877497230096,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.07297288786386356
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 62,
+    "fold": 3,
+    "parameter": 0.0001,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8524590163934426,
+    "recall": 0.8524590163934426,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8524590163934426,
+    "roc_auc": 0.8946135831381733,
+    "average_precision": 0.8973134279975483,
+    "brier": 0.12650245623218997,
+    "log_loss": 0.41470096249781,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        9,
+        52
+      ]
+    ],
+    "pr_auc_trapezoid": 0.895813180438543,
+    "sensitivity": 0.8524590163934426,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 21,
+        "predicted": 0.1396275379118465,
+        "observed": 0.09523809523809523
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 14,
+        "predicted": 0.27271764831883566,
+        "observed": 0.0
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 23,
+        "predicted": 0.480662623177404,
+        "observed": 0.6086956521739131
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 11,
+        "predicted": 0.714604301886125,
+        "observed": 0.7272727272727273
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 41,
+        "predicted": 0.9097739937828808,
+        "observed": 0.9024390243902439
+      }
+    ],
+    "ece_5_bins": 0.07395519512620839
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 62,
+    "fold": 3,
+    "parameter": null,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8448275862068966,
+    "recall": 0.8032786885245902,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8235294117647058,
+    "roc_auc": 0.8882569421211107,
+    "average_precision": 0.881380508728693,
+    "brier": 0.12829611957659093,
+    "log_loss": 0.41649566458057063,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8787114237059387,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 27,
+        "predicted": 0.14019340331907626,
+        "observed": 0.07407407407407407
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 11,
+        "predicted": 0.3033953173594041,
+        "observed": 0.09090909090909091
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.4750430073056902,
+        "observed": 0.6190476190476191
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7044037342071533,
+        "observed": 0.8
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 41,
+        "predicted": 0.9030345125896174,
+        "observed": 0.9024390243902439
+      }
+    ],
+    "ece_5_bins": 0.07388222637501628
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 62,
+    "fold": 3,
+    "parameter": 0.5,
+    "accuracy": 0.8,
+    "precision": 0.8421052631578947,
+    "recall": 0.7868852459016393,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8135593220338984,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.90023295603661,
+    "brier": 0.1360134459831415,
+    "log_loss": 0.45900929455362416,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732185,
+    "sensitivity": 0.7868852459016393,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 34,
+        "predicted": 0.056257512461503636,
+        "observed": 0.08823529411764706
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.3114776611328125,
+        "observed": 0.46153846153846156
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.49374914982102136,
+        "observed": 0.6363636363636364
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 7,
+        "predicted": 0.7233240519251142,
+        "observed": 0.7142857142857143
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 45,
+        "predicted": 0.9635987255308364,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.0730182304174047
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 62,
+    "fold": 3,
+    "parameter": 10.0,
+    "accuracy": 0.8090909090909091,
+    "precision": 0.8448275862068966,
+    "recall": 0.8032786885245902,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8235294117647058,
+    "roc_auc": 0.8912679826028772,
+    "average_precision": 0.9002329560366099,
+    "brier": 0.1333913534788567,
+    "log_loss": 0.42415662716810065,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8989120093732184,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 20,
+        "predicted": 0.12160047534885436,
+        "observed": 0.1
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.29089644031729706,
+        "observed": 0.10526315789473684
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.499601620977871,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.7182044673031958,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9133404800840028,
+        "observed": 0.8947368421052632
+      }
+    ],
+    "ece_5_bins": 0.07778084061840179
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 62,
+    "fold": 3,
+    "parameter": 0.1,
+    "accuracy": 0.8363636363636363,
+    "precision": 0.8412698412698413,
+    "recall": 0.8688524590163934,
+    "specificity": 0.7959183673469388,
+    "f1": 0.8548387096774194,
+    "roc_auc": 0.8946135831381733,
+    "average_precision": 0.8973134279975483,
+    "brier": 0.12904542201626157,
+    "log_loss": 0.4216572045061709,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "pr_auc_trapezoid": 0.895813180438543,
+    "sensitivity": 0.8688524590163934,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 16,
+        "predicted": 0.15557646078221737,
+        "observed": 0.0625
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 18,
+        "predicted": 0.26948785005860265,
+        "observed": 0.05555555555555555
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 24,
+        "predicted": 0.49116108979846,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.7146292139025104,
+        "observed": 0.75
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.8978718833387738,
+        "observed": 0.9
+      }
+    ],
+    "ece_5_bins": 0.07328829652751101
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 62,
+    "fold": 3,
+    "parameter": 0.1,
+    "accuracy": 0.8272727272727273,
+    "precision": 0.85,
+    "recall": 0.8360655737704918,
+    "specificity": 0.8163265306122449,
+    "f1": 0.8429752066115702,
+    "roc_auc": 0.8932753429240549,
+    "average_precision": 0.9006357606754758,
+    "brier": 0.13043036606517508,
+    "log_loss": 0.4189797443566425,
+    "confusion_matrix": [
+      [
+        40,
+        9
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8992450994234974,
+    "sensitivity": 0.8360655737704918,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 19,
+        "predicted": 0.12110061633588753,
+        "observed": 0.10526315789473684
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.2831774612033377,
+        "observed": 0.10526315789473684
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 21,
+        "predicted": 0.49557059080276755,
+        "observed": 0.6190476190476191
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 13,
+        "predicted": 0.7114473880593895,
+        "observed": 0.7692307692307693
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9136111583011275,
+        "observed": 0.8947368421052632
+      }
+    ],
+    "ece_5_bins": 0.07038826397325404
+  },
+  {
+    "model": "BN",
+    "seed": 62,
+    "fold": 4,
+    "parameter": null,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.8245614035087719,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7959183673469388,
+    "f1": 0.7966101694915254,
+    "roc_auc": 0.8261960521913684,
+    "average_precision": 0.8525100453508362,
+    "brier": 0.18552518191344294,
+    "log_loss": 0.6419755943857772,
+    "confusion_matrix": [
+      [
+        39,
+        10
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8507323294749798,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 39,
+        "predicted": 0.0511990296777478,
+        "observed": 0.23076923076923078
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.2946238333216282,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 5,
+        "predicted": 0.45771555368183614,
+        "observed": 0.4
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7257775462834155,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 46,
+        "predicted": 0.9558236135547082,
+        "observed": 0.8478260869565217
+      }
+    ],
+    "ece_5_bins": 0.12337489967374063
+  },
+  {
+    "model": "Tuned MLP",
+    "seed": 62,
+    "fold": 4,
+    "parameter": 0.01,
+    "accuracy": 0.7363636363636363,
+    "precision": 0.7580645161290323,
+    "recall": 0.7704918032786885,
+    "specificity": 0.6938775510204082,
+    "f1": 0.7642276422764228,
+    "roc_auc": 0.815322850451656,
+    "average_precision": 0.8216815702095253,
+    "brier": 0.17762248909469214,
+    "log_loss": 0.559242918783276,
+    "confusion_matrix": [
+      [
+        34,
+        15
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8186256942916448,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 30,
+        "predicted": 0.06348076867870986,
+        "observed": 0.13333333333333333
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 12,
+        "predicted": 0.2764226297537486,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 13,
+        "predicted": 0.5027127518103673,
+        "observed": 0.46153846153846156
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 11,
+        "predicted": 0.7077822305939414,
+        "observed": 0.5454545454545454
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 44,
+        "predicted": 0.9098464399576187,
+        "observed": 0.8636363636363636
+      }
+    ],
+    "ece_5_bins": 0.09211471864360977
+  },
+  {
+    "model": "Original BN feature MLP",
+    "seed": 62,
+    "fold": 4,
+    "parameter": null,
+    "accuracy": 0.7636363636363637,
+    "precision": 0.7777777777777778,
+    "recall": 0.8032786885245902,
+    "specificity": 0.7142857142857143,
+    "f1": 0.7903225806451613,
+    "roc_auc": 0.8360655737704918,
+    "average_precision": 0.8614840146673782,
+    "brier": 0.16825047656957456,
+    "log_loss": 0.5143157258577687,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8598927477312351,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.09900651827003017,
+        "observed": 0.18181818181818182
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 10,
+        "predicted": 0.29998679459095,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 8,
+        "predicted": 0.4933272898197174,
+        "observed": 0.375
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 21,
+        "predicted": 0.730860982622419,
+        "observed": 0.6666666666666666
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 38,
+        "predicted": 0.9055047035217285,
+        "observed": 0.868421052631579
+      }
+    ],
+    "ece_5_bins": 0.07669813307848843
+  },
+  {
+    "model": "BN residual MLP",
+    "seed": 62,
+    "fold": 4,
+    "parameter": 0.25,
+    "accuracy": 0.7454545454545455,
+    "precision": 0.7704918032786885,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7142857142857143,
+    "f1": 0.7704918032786885,
+    "roc_auc": 0.833389093342255,
+    "average_precision": 0.858566447501823,
+    "brier": 0.1796009284368126,
+    "log_loss": 0.5777610669261504,
+    "confusion_matrix": [
+      [
+        35,
+        14
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8566110848347518,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 33,
+        "predicted": 0.07646570722995834,
+        "observed": 0.24242424242424243
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 9,
+        "predicted": 0.29733031657007003,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 9,
+        "predicted": 0.4747414423359765,
+        "observed": 0.3333333333333333
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 10,
+        "predicted": 0.7011732399463654,
+        "observed": 0.6
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 49,
+        "predicted": 0.9456799285752433,
+        "observed": 0.8367346938775511
+      }
+    ],
+    "ece_5_bins": 0.12203073357231917
+  },
+  {
+    "model": "Calibrated BN",
+    "seed": 62,
+    "fold": 4,
+    "parameter": 10.0,
+    "accuracy": 0.7727272727272727,
+    "precision": 0.8103448275862069,
+    "recall": 0.7704918032786885,
+    "specificity": 0.7755102040816326,
+    "f1": 0.7899159663865546,
+    "roc_auc": 0.8261960521913684,
+    "average_precision": 0.8525100453508362,
+    "brier": 0.16804592622790332,
+    "log_loss": 0.5098351761614708,
+    "confusion_matrix": [
+      [
+        38,
+        11
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8507323294749798,
+    "sensitivity": 0.7704918032786885,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 25,
+        "predicted": 0.11836139632433419,
+        "observed": 0.16
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 19,
+        "predicted": 0.2906027736479216,
+        "observed": 0.42105263157894735
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 10,
+        "predicted": 0.48062863676380374,
+        "observed": 0.3
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 20,
+        "predicted": 0.7062047816079643,
+        "observed": 0.7
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 36,
+        "predicted": 0.9138769933062749,
+        "observed": 0.8888888888888888
+      }
+    ],
+    "ece_5_bins": 0.05772241955822144
+  },
+  {
+    "model": "Calibrated MLP",
+    "seed": 62,
+    "fold": 4,
+    "parameter": 1.0,
+    "accuracy": 0.7272727272727273,
+    "precision": 0.7540983606557377,
+    "recall": 0.7540983606557377,
+    "specificity": 0.6938775510204082,
+    "f1": 0.7540983606557377,
+    "roc_auc": 0.8143191702910672,
+    "average_precision": 0.82084297298642,
+    "brier": 0.177000865209609,
+    "log_loss": 0.5539143736156191,
+    "confusion_matrix": [
+      [
+        34,
+        15
+      ],
+      [
+        15,
+        46
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8177780593092465,
+    "sensitivity": 0.7540983606557377,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 30,
+        "predicted": 0.06513853340275969,
+        "observed": 0.13333333333333333
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 13,
+        "predicted": 0.2796673297592952,
+        "observed": 0.5384615384615384
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 12,
+        "predicted": 0.49047556627480865,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 12,
+        "predicted": 0.6936858921028698,
+        "observed": 0.5833333333333334
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 43,
+        "predicted": 0.8973513517822282,
+        "observed": 0.8604651162790697
+      }
+    ],
+    "ece_5_bins": 0.07668000679653564
+  },
+  {
+    "model": "Calibrated BN-MLP",
+    "seed": 62,
+    "fold": 4,
+    "parameter": 10.0,
+    "accuracy": 0.7818181818181819,
+    "precision": 0.8032786885245902,
+    "recall": 0.8032786885245902,
+    "specificity": 0.7551020408163265,
+    "f1": 0.8032786885245902,
+    "roc_auc": 0.8303780528604885,
+    "average_precision": 0.8522221380324942,
+    "brier": 0.16938967034806313,
+    "log_loss": 0.5237557223199482,
+    "confusion_matrix": [
+      [
+        37,
+        12
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "pr_auc_trapezoid": 0.8502300934269088,
+    "sensitivity": 0.8032786885245902,
+    "reliability": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 29,
+        "predicted": 0.08226600636378084,
+        "observed": 0.13793103448275862
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 16,
+        "predicted": 0.28788933358281366,
+        "observed": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6,
+        "n": 11,
+        "predicted": 0.5123767363786467,
+        "observed": 0.45454545454545453
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.8,
+        "n": 14,
+        "predicted": 0.7095899933333306,
+        "observed": 0.6428571428571429
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 40,
+        "predicted": 0.9086149587781567,
+        "observed": 0.875
+      }
+    ],
+    "ece_5_bins": 0.07202780760075769
+  }
+]

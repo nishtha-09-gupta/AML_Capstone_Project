@@ -4,7 +4,22 @@ A reproducible Phase 1 machine learning project using the multi-center UCI Heart
 
 **Repository:** [AML_Capstone_Project](https://github.com/nishtha-09-gupta/AML_Capstone_Project)
 
-> This is an academic classification project. It predicts recorded disease presence (`num > 0`), not future cardiovascular risk. The models are not clinically validated. Neural-network implementation remains Phase 2.
+> This is an academic classification project. It predicts recorded disease presence (`num > 0`), not future cardiovascular risk. The models are not clinically validated. Phase 2 implementation and evidence are available on the Phase 2 branch; see the section below.
+
+## Phase 2 evaluation: start here
+
+- [Overview and run instructions](docs/phase2/README.md)
+- [Original protocol](docs/phase2/protocol.md) and [follow-up protocol](docs/phase2/hybrid_improvement_protocol.md)
+- [Architectures and rationale](docs/phase2/literature_review.md) · [MLP implementation](phase2_models.py) · [hybrids](phase2_hybrids.py)
+- [Results interpretation and limitations](docs/phase2/results_interpretation.md) · [saved follow-up results](artifacts/phase2/hybrid_followup_v1/RESULTS.md)
+- [Current IEEE report PDF](docs/phase2/phase2_report_with_followup.pdf) and [LaTeX source](docs/phase2/phase2_report_with_followup.tex)
+- [Current editable presentation](docs/phase2/phase2_presentation_with_followup.pptx) and [presentation PDF](docs/phase2/phase2_presentation_with_followup.pdf)
+- [Verification and audit findings](docs/phase2/submission_audit.md) · [verified literature](docs/phase2/literature_review.md)
+- [Team and proposed responsibility allocation](docs/phase2/contributions.md)
+
+The stack's modest Brier gain is exploratory. The reported conditional interval
+includes zero, so it does not establish statistical superiority. Preserve the
+original negative hybrid findings and the follow-up selection caveats.
 
 ## Dataset
 
@@ -256,3 +271,37 @@ The underlying data is the **UCI Heart Disease dataset**, credited to Andras Jan
 Dataset DOI: [10.24432/C52P4X](https://doi.org/10.24432/C52P4X).
 
 Attribution to UCI does not by itself establish the exact acquisition and transformation history of the merged CSV supplied with this project.
+
+## Phase 2 — Deep Learning Evaluation
+
+The completed Phase 2 compares a pgmpy Bayesian Network, Naive Bayes, a small
+regularized PyTorch MLP, and a BN-assisted MLP with cross-fitted probabilities.
+It includes regularization and NB-input ablations, three neural seeds, calibration,
+D-only hospital holdouts, Cleveland-only CV, saved models and result verification.
+
+- [Setup, inference and reproduction](docs/phase2/README.md)
+- [Results and limitations](artifacts/phase2/full_run/RESULTS.md)
+- [Rubric evidence checklist](docs/phase2/rubric_checklist.md)
+- [IEEE report](docs/phase2/phase2_report.pdf) and [LaTeX source](docs/phase2/phase2_report.tex)
+- [Presentation](docs/phase2/phase2_presentation.pptx) and [viva guide](docs/phase2/viva_guide.md)
+
+The standalone MLP was selected by the predeclared S-only criterion. The functioning
+hybrid did not demonstrate added value over the MLP. All historical T results remain
+retrospective; no clinical benefit or bonus-mark outcome is claimed.
+
+### Hybrid improvement follow-up
+
+A separate exploratory nested-CV study on S only adds residual BN correction and
+a calibrated BN–MLP stack, with calibrated single-base controls. The stack has
+the lowest mean Brier among all seven tested families, improving by 1.80% against
+tuned MLP and 0.89% against calibrated BN. Every seed mean improves on both
+controls, while conditional intervals include zero. Original T scores and
+negative feature-hybrid findings remain preserved.
+
+- [Follow-up methods, evidence and run instructions](docs/phase2/hybrid_followup_guide.md)
+- [All follow-up results](artifacts/phase2/hybrid_followup_v1/RESULTS.md)
+- [Updated report](docs/phase2/phase2_report_with_followup.pdf) and [LaTeX](docs/phase2/phase2_report_with_followup.tex)
+- [Updated presentation](docs/phase2/phase2_presentation_with_followup.pptx)
+
+The observed gain supports a stronger technical hybrid case; it does not establish
+external superiority, clinical benefit or guaranteed bonus marks.

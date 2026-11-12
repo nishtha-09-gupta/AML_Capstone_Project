@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "required_deliverables_checked": 43,
+  "saved_models_checked": 35,
+  "hybrid_implemented": true,
+  "original_feature_hybrid_improvement_demonstrated": false,
+  "followup_models_checked": 105,
+  "followup_final_models_checked": 12,
+  "followup_observed_brier_improvement": true,
+  "followup_every_seed_improves": true,
+  "confirmatory_superiority_established": false,
+  "bonus_marks_guaranteed": false,
+  "human_requirements": [
+    "Confirm author names and contributions",
+    "Rehearse and perform presentation and viva",
+    "Faculty review of provisional graph and submission requirements"
+  ]
+}
