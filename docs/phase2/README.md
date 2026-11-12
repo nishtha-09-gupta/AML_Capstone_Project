@@ -37,6 +37,10 @@ presence in the study context, not medical advice. The existing Phase 1 web app
 continues to show its Phase 1 frozen models; Phase 2 is reviewed through these
 commands and its saved evidence.
 
+For the dataset source, feature-level and hospital-level missingness, exclusions,
+preprocessing conventions, and patient-linkage limits that apply to both phases,
+see [dataset provenance and limitations](../dataset_provenance_and_limitations.md).
+
 ## Reading order
 
 1. `protocol.md`: fixed settings, partitions, hybrid rationale and restrictions.
