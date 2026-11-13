@@ -16,7 +16,7 @@ A reproducible Phase 1 machine learning project using the multi-center UCI Heart
 - [Current editable presentation](docs/phase2/phase2_presentation_with_followup.pptx) and [presentation PDF](docs/phase2/phase2_presentation_with_followup.pdf)
 - [Verification and audit findings](docs/phase2/submission_audit.md) · [verified literature](docs/phase2/literature_review.md)
 - [Team and proposed responsibility allocation](docs/phase2/contributions.md)
-- [Dataset provenance, missingness, exclusions, and patient-linkage limitations](docs/dataset_provenance_and_limitations.md)
+- [Dataset provenance, missingness, exclusions, and patient-linkage limitations](docs/phase2/dataset_provenance_and_limitations.md)
 
 The stack's modest Brier gain is exploratory. The reported conditional interval
 includes zero, so it does not establish statistical superiority. Preserve the
@@ -26,7 +26,7 @@ original negative hybrid findings and the follow-up selection caveats.
 
 The supplied CSV contains **920 records and 16 columns** from Cleveland, Hungary, Switzerland, and VA Long Beach. Removing two exact duplicate records while ignoring the arbitrary row ID leaves **918 records**.
 
-See [dataset provenance and limitations](docs/dataset_provenance_and_limitations.md) for the source record, reproducible feature and hospital missingness counts, exclusion rationale, and patient-linkage caveats.
+See [dataset provenance and limitations](docs/phase2/dataset_provenance_and_limitations.md) for the source record, reproducible feature and hospital missingness counts, exclusion rationale, and patient-linkage caveats.
 
 | Binary target | Definition | Records |
 | --- | --- | ---: |

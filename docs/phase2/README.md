@@ -39,7 +39,7 @@ commands and its saved evidence.
 
 For the dataset source, feature-level and hospital-level missingness, exclusions,
 preprocessing conventions, and patient-linkage limits that apply to both phases,
-see [dataset provenance and limitations](../dataset_provenance_and_limitations.md).
+see [dataset provenance and limitations](dataset_provenance_and_limitations.md).
 
 ## Reading order
 
