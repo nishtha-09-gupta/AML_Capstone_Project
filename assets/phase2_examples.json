@@ -1,0 +1,103 @@
+{
+  "run": "hybrid_followup_v1",
+  "seed": 42,
+  "models": {
+    "Calibrated BN-MLP": "cc4e508ead9d2d4b33255cfbd3ccd304faa34207e5b8bed29319219d033f03b7",
+    "Calibrated BN": "dc05f20771ef7e3489c352c6a759d175efd61007ac43c32395bc5f65404672f7",
+    "Tuned MLP": "35ca37813ae44bd16bbe5e027d9e041a6fb437ca43367d585a529e0868723d61",
+    "Calibrated MLP": "c76466415404d3a8603b7541633486212d1b8fee60b363491653dee9aff23cfb"
+  },
+  "cutoff": 0.5,
+  "profiles": {
+    "Profile A": {
+      "inputs": {
+        "age": 45,
+        "trestbps": 120,
+        "chol": 220,
+        "thalch": 170,
+        "oldpeak": 0.0,
+        "sex": "Female",
+        "cp": "atypical angina",
+        "fbs": false,
+        "restecg": "normal",
+        "exang": false,
+        "slope": "upsloping"
+      },
+      "scores": {
+        "Calibrated BN-MLP": 0.02314613895230463,
+        "Calibrated BN": 0.02184322786109811,
+        "Tuned MLP": 0.07718828320503235,
+        "Calibrated MLP": 0.16772954897383166
+      },
+      "explanation": {
+        "bn_probability": 0.0007082305611137711,
+        "mlp_probability": 0.07718828320503235,
+        "intercept": 0.13623514873621656,
+        "bn_log_odds_contribution": -3.8975177182769696,
+        "mlp_log_odds_contribution": 0.01877349066624216,
+        "combined_log_odds": -3.7425090788745106,
+        "probability": 0.02314613895230463
+      }
+    },
+    "Profile B": {
+      "inputs": {
+        "age": 65,
+        "trestbps": 160,
+        "chol": 280,
+        "thalch": 110,
+        "oldpeak": 2.5,
+        "sex": "Male",
+        "cp": "asymptomatic",
+        "fbs": true,
+        "restecg": "lv hypertrophy",
+        "exang": true,
+        "slope": "flat"
+      },
+      "scores": {
+        "Calibrated BN-MLP": 0.9791015357265164,
+        "Calibrated BN": 0.9802792742532742,
+        "Tuned MLP": 0.9416378140449524,
+        "Calibrated MLP": 0.8881363466526169
+      },
+      "explanation": {
+        "bn_probability": 0.9990361609454479,
+        "mlp_probability": 0.9416378140449524,
+        "intercept": 0.13623514873621656,
+        "bn_log_odds_contribution": 3.731766222701747,
+        "mlp_log_odds_contribution": -0.02104169710420127,
+        "combined_log_odds": 3.846959674333762,
+        "probability": 0.9791015357265164
+      }
+    },
+    "Missing values": {
+      "inputs": {
+        "age": 55,
+        "trestbps": null,
+        "chol": null,
+        "thalch": null,
+        "oldpeak": null,
+        "sex": "Male",
+        "cp": "non-anginal",
+        "fbs": null,
+        "restecg": null,
+        "exang": null,
+        "slope": null
+      },
+      "scores": {
+        "Calibrated BN-MLP": 0.5061428952716122,
+        "Calibrated BN": 0.5066297797149117,
+        "Tuned MLP": 0.6097034811973572,
+        "Calibrated MLP": 0.6086856977082955
+      },
+      "explanation": {
+        "bn_probability": 0.4497977585861539,
+        "mlp_probability": 0.6097034811973572,
+        "intercept": 0.13623514873621656,
+        "bn_log_odds_contribution": -0.10828723395094003,
+        "mlp_log_odds_contribution": -0.0033750973033849032,
+        "combined_log_odds": 0.02457281748189162,
+        "probability": 0.5061428952716122
+      }
+    }
+  }
+}

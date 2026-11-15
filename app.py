@@ -21,12 +21,14 @@ except (ValueError, OSError, KeyError):
 page = st.navigation([
     st.Page("views/live.py", title="Prediction", default=True),
     st.Page("views/models.py", title="Model studio", url_path="models"),
+    st.Page("views/phase2.py", title="Phase 2", url_path="phase-2"),
 ], position="hidden")
 with st.sidebar:
     st.html('<div class="sidebar-brand">HeartLens</div><div class="sidebar-description">Heart disease prediction · UCI dataset</div>')
     st.page_link("views/live.py", label="Prediction")
     st.page_link("views/models.py", label="Model studio")
-    st.html('<div class="sidebar-notes">UCI-derived cohort · 918 records · 4 hospitals<br><br>Educational model. No diagnostic use.<br><br>Phase 1 · Machine Learning</div>')
+    st.page_link("views/phase2.py", label="Phase 2")
+    st.html('<div class="sidebar-notes">UCI-derived cohort · 918 records · 4 hospitals<br><br>Educational models. No diagnostic use.</div>')
 page.run()
 st.divider()
-st.caption("HEARTLENS / PHASE 01 · Academic demonstration. Use fictional inputs. This app does not provide medical advice.")
+st.caption("HeartLens · Academic demonstration. Use fictional inputs. This app does not provide medical advice.")

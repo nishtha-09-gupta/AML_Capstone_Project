@@ -64,7 +64,30 @@ def test_app_submission_controls_and_evidence_views():
     app.slider(key="cutoff_Random forest").set_value(1.0).run()
     assert not app.exception
     assert [m for m in app.metric if m.label == "Recall"][-1].value == "0.0%"
-    assert [link.label for link in app.get("page_link")] == ["Prediction", "Model studio"]
+    assert [link.label for link in app.get("page_link")] == ["Prediction", "Model studio", "Phase 2"]
+
+
+def test_phase2_explores_verified_results_and_frozen_examples():
+    app = AppTest.from_file(str(study.ROOT / "app.py"), default_timeout=60).run()
+    app.switch_page("views/phase2.py").run()
+    assert not app.exception and not app.error
+    assert app.dataframe[0].value.iloc[0]["Model"] == "Calibrated BN-MLP"
+    assert len(app.dataframe[1].value) == 11
+    first_score = app.dataframe[2].value.iloc[0]["Model score"]
+    app.selectbox(key="phase2_profile").select("Profile B").run()
+    assert not app.exception and not app.error
+    assert app.dataframe[2].value.iloc[0]["Model score"] > first_score
+    app.selectbox(key="phase2_evaluation").select("Original selection CV").run()
+    assert not app.exception and not app.error
+    assert set(app.dataframe[0].value["Model"]) >= {"MLP", "BN + MLP"}
+    app.selectbox(key="phase2_evaluation").select("Original retrospective test").run()
+    assert not app.exception and not app.error
+    assert len(app.dataframe[0].value) == 9
+    assert "Cutoff" in app.dataframe[0].value
+    app.selectbox(key="phase2_evaluation").select("Hospital holdouts").run()
+    app.selectbox(key="phase2_hospital").select("Switzerland").run()
+    assert not app.exception and not app.error
+    assert len(app.dataframe[0].value) == 4
 
 
 def test_typing_does_not_run_inference_until_predict():
