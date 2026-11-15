@@ -65,6 +65,22 @@ def test_training_cache_keys_include_target_values(sample):
     assert changed is not first
 
 
+def test_calibration_reuses_only_matching_base_fits(sample):
+    from phase2_improve import TrainingCache
+    from phase2_models import DEFAULT_WEIGHT_DECAY
+
+    x, y = sample
+    cache = TrainingCache(42, smoke=True)
+    bn = cache.fit('BN', None, x, y)
+    mlp = cache.fit('Tuned MLP', DEFAULT_WEIGHT_DECAY, x, y)
+    model = cache.fit('Calibrated BN-MLP', 1.0, x, y)
+    assert model.bases_[0] is bn
+    assert model.bases_[1] is mlp
+    for fold in model.cross_fit_audit_:
+        assert fold['mlp_audit']['fit_indices'] == fold['train_indices']
+        assert set(fold['train_indices']).isdisjoint(fold['validation_indices'])
+
+
 def test_exact_stack_explanation_reconstructs_probabilities(sample):
     x,y=sample
     package=base_pair(x,y,max_epochs=2)
@@ -74,3 +90,12 @@ def test_exact_stack_explanation_reconstructs_probabilities(sample):
         np.testing.assert_allclose(explanation.probability,model.predict_proba(x)[:,1],atol=1e-12)
         np.testing.assert_allclose(explanation.combined_log_odds,explanation.intercept+
             explanation.bn_log_odds_contribution+explanation.mlp_log_odds_contribution,atol=1e-12)
+
+
+@pytest.mark.parametrize('component,unused', [('bn', 1), ('mlp', 0)])
+def test_single_base_calibration_skips_unused_model(sample, component, unused):
+    x, y = sample
+    model = CalibratedHybrid(component=component, max_epochs=2).fit(x, y)
+    expected = model.explain(x).probability
+    with patch.object(model.bases_[unused], 'predict_proba', side_effect=AssertionError):
+        np.testing.assert_allclose(model.predict_proba(x)[:, 1], expected, atol=1e-12)

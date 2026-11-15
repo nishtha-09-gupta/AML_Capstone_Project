@@ -17,7 +17,7 @@ from threadpoolctl import threadpool_limits
 from data_loader import load_dataset
 from advanced_modeling import clean_features
 from experiment import write_json
-from phase2_models import HeartMLP
+from phase2_models import DEFAULT_WEIGHT_DECAY, HeartMLP
 from phase2_hybrids import BNResidualMLP,CalibratedHybrid,base_pair
 from phase2_baselines import DiscreteHeartModel
 from phase2_train import metrics,describe,ROOT
@@ -35,11 +35,16 @@ class TrainingCache:
     """Reuse only identical fitted subsets, never an outer OOF matrix.
 
     Each outer experiment owns a new cache. The row IDs AND feature/target
-    contents identify a subset; package reuse changes only meta C/component.
+    contents identify a subset. Base fits can be shared with standalone models
+    when the training rows and estimator settings match.
     """
     def __init__(self,seed,smoke=False):
         self.seed=seed;self.epochs=3 if smoke else 150
         self.models={};self.packages={}
+
+    def _fit_calibration_bases(self, x, y):
+        return [self.fit('BN', None, x, y),
+                self.fit('Tuned MLP', DEFAULT_WEIGHT_DECAY, x, y)]
 
     def fit(self,name,value,x,y):
         content=pd.util.hash_pandas_object(x,index=True).values.tobytes()+np.asarray(y).tobytes()
@@ -47,7 +52,9 @@ class TrainingCache:
         model_key=(key,name,value)
         if model_key in self.models:return self.models[model_key]
         if name.startswith('Calibrated'):
-            if key not in self.packages:self.packages[key]=base_pair(x,y,self.seed,self.epochs)
+            if key not in self.packages:
+                self.packages[key] = base_pair(x, y, self.seed, self.epochs,
+                                               fit_bases=self._fit_calibration_bases)
             component={'Calibrated BN':'bn','Calibrated MLP':'mlp','Calibrated BN-MLP':'both'}[name]
             model=CalibratedHybrid(component,C=value,random_state=self.seed,max_epochs=self.epochs)
             model.fit(x,y,self.packages[key])
@@ -56,7 +63,7 @@ class TrainingCache:
             model=BNResidualMLP(strength=value,random_state=self.seed,max_epochs=self.epochs).fit(x,y)
         else:
             model=HeartMLP(hybrid='bn' if name=='Original BN feature MLP' else 'none',
-                weight_decay=.001 if value is None else value,
+                weight_decay=DEFAULT_WEIGHT_DECAY if value is None else value,
                 random_state=self.seed,max_epochs=self.epochs).fit(x,y)
         self.models[model_key]=model
         return model

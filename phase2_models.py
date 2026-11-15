@@ -30,6 +30,9 @@ def cross_fit_bn(x, y, *, structured=True, seed=1729):
     return probabilities, folds
 
 
+DEFAULT_WEIGHT_DECAY = 0.001
+
+
 class HeartMLP(ClassifierMixin, BaseEstimator):
     """CPU PyTorch classifier with training-only early stopping and optional BN.
 
@@ -38,7 +41,7 @@ class HeartMLP(ClassifierMixin, BaseEstimator):
     unit. fit owns preprocessing to isolate even the early-stop subset.
     """
     def __init__(self, hybrid="none", hidden=(32, 16), dropout=0.2,
-                 weight_decay=0.001, learning_rate=0.001, max_epochs=150,
+                 weight_decay=DEFAULT_WEIGHT_DECAY, learning_rate=0.001, max_epochs=150,
                  patience=20, batch_size=32, random_state=42):
         self.hybrid = hybrid
         self.hidden = hidden
@@ -86,6 +89,10 @@ class HeartMLP(ClassifierMixin, BaseEstimator):
             loss_fn = nn.BCEWithLogitsLoss()
             x_tensor = torch.as_tensor(matrix)
             y_tensor = torch.as_tensor(np.asarray(y, dtype=np.float32)).reshape(-1, 1)
+            if validation is not None:
+                valid_matrix, valid_target = validation
+                valid_x = torch.as_tensor(valid_matrix)
+                valid_y = torch.as_tensor(np.asarray(valid_target, dtype=np.float32)).reshape(-1, 1)
             history, best, best_epoch, stale = [], float("inf"), 1, 0
             for epoch in range(1, epochs + 1):
                 network.train()
@@ -99,9 +106,7 @@ class HeartMLP(ClassifierMixin, BaseEstimator):
                     train_loss = float(loss_fn(network(x_tensor), y_tensor))
                     row = {"epoch": epoch, "train_bce": train_loss}
                     if validation is not None:
-                        vx, vy = validation
-                        valid_loss = float(loss_fn(network(torch.as_tensor(vx)),
-                            torch.as_tensor(np.asarray(vy, dtype=np.float32)).reshape(-1, 1)))
+                        valid_loss = float(loss_fn(network(valid_x), valid_y))
                         row["validation_bce"] = valid_loss
                         if valid_loss < best - 0.0001:
                             best, best_epoch, stale = valid_loss, epoch, 0

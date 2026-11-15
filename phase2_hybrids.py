@@ -62,21 +62,23 @@ class BNResidualMLP(HeartMLP):
         return self
 
 
-def base_pair(x,y,seed=42,max_epochs=150):
-    """Cross-fit both base learners afresh within exactly this training subset."""
+def base_pair(x,y,seed=42,max_epochs=150, *, fit_bases=None):
+    """Cross-fit both base learners within exactly this training subset."""
+    if fit_bases is None:
+        def fit_bases(features, target):
+            return [DiscreteHeartModel().fit(features, target),
+                    HeartMLP(random_state=seed,max_epochs=max_epochs).fit(features, target)]
     y=pd.Series(np.asarray(y),index=x.index)
     oof=np.empty((len(x),2))
     audits=[]
     for train,valid in StratifiedKFold(3,shuffle=True,random_state=1729).split(x,y):
-        bn=DiscreteHeartModel().fit(x.iloc[train],y.iloc[train])
-        mlp=HeartMLP(random_state=seed,max_epochs=max_epochs).fit(x.iloc[train],y.iloc[train])
+        bn,mlp=fit_bases(x.iloc[train],y.iloc[train])
         oof[valid,0]=log_odds(bn.predict_proba(x.iloc[valid])[:,1]).ravel()
         oof[valid,1]=log_odds(mlp.predict_proba(x.iloc[valid])[:,1]).ravel()
         audits.append(dict(train_indices=x.index[train].tolist(),
                            validation_indices=x.index[valid].tolist(),
                            mlp_audit=mlp.audit_))
-    bases=[DiscreteHeartModel().fit(x,y),
-           HeartMLP(random_state=seed,max_epochs=max_epochs).fit(x,y)]
+    bases=fit_bases(x,y)
     return oof,bases,audits
 
 
@@ -110,8 +112,13 @@ class CalibratedHybrid(ClassifierMixin,BaseEstimator):
 
     def predict_proba(self,x):
         check_is_fitted(self,'meta_')
-        matrix=np.column_stack([log_odds(model.predict_proba(x)[:,1]).ravel() for model in self.bases_])
-        return self.meta_.predict_proba(matrix[:,self.columns_])
+        # Keep the column-major layout of the original column selection for
+        # reproducible floating-point scores in the calibration search.
+        matrix = np.stack([
+            log_odds(self.bases_[column].predict_proba(x)[:, 1]).ravel()
+            for column in self.columns_
+        ]).T
+        return self.meta_.predict_proba(matrix)
 
     def explain(self,x):
         """Exact additive decomposition on the stack's log-odds scale.
